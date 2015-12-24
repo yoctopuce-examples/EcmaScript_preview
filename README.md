@@ -1,4 +1,4 @@
-Preview of the YEcmaScript 2015 library
+Preview of the EcmaScript 2015 library
 =======================================
 
 ## License information
