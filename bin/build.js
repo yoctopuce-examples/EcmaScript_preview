@@ -70,10 +70,7 @@ function build()
     jspm.setPackagePath('.');
     console.log('Creating yocto_api bundle');
     jspm.bundle('lib/yocto_api', 'bundles/yocto_api.js', bundleOptions)
-    .then(function() {
-        console.log('Creating global yoctolib bundle');
-        return jspm.bundle('jspm-index.js', 'bundles/yoctolib.js', bundleOptions); })
-    .then(function() { console.log('Bundles created, jspm will use pre-transpiled files'); })
+    .then(function() { console.log('Bundle created, jspm will use pre-transpiled files'); })
     .catch(function(err) { console.log(err); });
 }
 

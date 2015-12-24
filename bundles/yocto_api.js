@@ -3664,6 +3664,8 @@ System.register('lib/yocto_api.js', ['npm:babel-runtime@5.8.34/helpers/class-cal
 
                 this.calib = '';
 
+                this.unit = '';
+
                 this.cal = '';
 
                 this.streams = [];
@@ -4502,7 +4504,7 @@ System.register('lib/yocto_api.js', ['npm:babel-runtime@5.8.34/helpers/class-cal
 
                         var next_hwid = this._yapi.imm_getNextHardwareId(this._className, resolve.result);
                         if (next_hwid == null) return null;
-                        return YFunction.FindFunction(next_hwid, this._yapi);
+                        return YFunction.FindFunctionInContext(this._yapi, next_hwid);
                     }
                 }, {
                     key: 'describe',
@@ -5157,7 +5159,7 @@ System.register('lib/yocto_api.js', ['npm:babel-runtime@5.8.34/helpers/class-cal
                                     }
 
                                     context$2$0.next = 10;
-                                    return _regeneratorRuntime.awrap(YModule.FindModule(hwid.substr(0, dotidx) + '.module', this._yapi));
+                                    return _regeneratorRuntime.awrap(YModule.FindModuleInContext(this._yapi, hwid.substr(0, dotidx) + '.module'));
 
                                 case 10:
                                     return context$2$0.abrupt('return', context$2$0.sent);
@@ -5187,14 +5189,14 @@ System.register('lib/yocto_api.js', ['npm:babel-runtime@5.8.34/helpers/class-cal
                                     }
 
                                     context$2$0.next = 22;
-                                    return _regeneratorRuntime.awrap(YModule.FindModule(hwid.substr(0, dotidx) + '.module', this._yapi));
+                                    return _regeneratorRuntime.awrap(YModule.FindModuleInContext(this._yapi, hwid.substr(0, dotidx) + '.module'));
 
                                 case 22:
                                     return context$2$0.abrupt('return', context$2$0.sent);
 
                                 case 23:
                                     context$2$0.next = 25;
-                                    return _regeneratorRuntime.awrap(YModule.FindModule('module_of_' + this.className + '_' + this._func, this._yapi));
+                                    return _regeneratorRuntime.awrap(YModule.FindModuleInContext(this._yapi, 'module_of_' + this.className + '_' + this._func));
 
                                 case 25:
                                     return context$2$0.abrupt('return', context$2$0.sent);
@@ -5294,34 +5296,53 @@ System.register('lib/yocto_api.js', ['npm:babel-runtime@5.8.34/helpers/class-cal
                 }], [{
                     key: 'FindFunction',
                     value: function FindFunction(func) {
-                        var obj_yapi = arguments.length <= 1 || arguments[1] === undefined ? YAPI : arguments[1];
-
                         var obj = undefined;
-                        obj = YFunction._FindFromCache(obj_yapi, 'Function', func);
+                        obj = YFunction._FindFromCache('Function', func);
                         if (obj == null) {
-                            obj = new YFunction(obj_yapi, func);
-                            YFunction._AddToCache(obj_yapi, 'Function', func, obj);
+                            obj = new YFunction(YAPI, func);
+                            YFunction._AddToCache('Function', func, obj);
+                        }
+                        return obj;
+                    }
+                }, {
+                    key: 'FindFunctionInContext',
+                    value: function FindFunctionInContext(yctx, func) {
+                        var obj = undefined;
+                        obj = YFunction._FindFromCacheInContext(yctx, 'Function', func);
+                        if (obj == null) {
+                            obj = new YFunction(yctx, func);
+                            YFunction._AddToCache('Function', func, obj);
                         }
                         return obj;
                     }
                 }, {
                     key: 'FirstFunction',
                     value: function FirstFunction() {
-                        var obj_yapi = arguments.length <= 0 || arguments[0] === undefined ? YAPI : arguments[0];
-
-                        var next_hwid = obj_yapi.imm_getFirstHardwareId('Function');
+                        var next_hwid = YAPI.imm_getFirstHardwareId('Function');
                         if (next_hwid == null) return null;
-                        return YFunction.FindFunction(next_hwid, obj_yapi);
+                        return YFunction.FindFunction(next_hwid);
+                    }
+                }, {
+                    key: 'FirstFunctionInContext',
+                    value: function FirstFunctionInContext(yctx) {
+                        var next_hwid = yctx.imm_getFirstHardwareId('Function');
+                        if (next_hwid == null) return null;
+                        return YFunction.FindFunctionInContext(yctx, next_hwid);
+                    }
+                }, {
+                    key: '_FindFromCacheInContext',
+                    value: function _FindFromCacheInContext(yctx, className, func) {
+                        return yctx.imm_getFunction(className, func);
                     }
                 }, {
                     key: '_FindFromCache',
-                    value: function _FindFromCache(obj_yapi, className, func) {
-                        return obj_yapi.imm_getFunction(className, func);
+                    value: function _FindFromCache(className, func) {
+                        return YAPI.imm_getFunction(className, func);
                     }
                 }, {
                     key: '_AddToCache',
-                    value: function _AddToCache(obj_yapi, className, func, obj) {
-                        obj_yapi.imm_setFunction(className, func, obj);
+                    value: function _AddToCache(className, func, obj) {
+                        obj._yapi.imm_setFunction(className, func, obj);
                     }
                 }, {
                     key: '_ClearCache',
@@ -7755,29 +7776,43 @@ System.register('lib/yocto_api.js', ['npm:babel-runtime@5.8.34/helpers/class-cal
 
                         var next_hwid = this._yapi.imm_getNextHardwareId(this._className, resolve.result);
                         if (next_hwid == null) return null;
-                        return YModule.FindModule(next_hwid, this._yapi);
+                        return YModule.FindModuleInContext(this._yapi, next_hwid);
                     }
                 }], [{
                     key: 'FindModule',
                     value: function FindModule(func) {
-                        var obj_yapi = arguments.length <= 1 || arguments[1] === undefined ? YAPI : arguments[1];
-
                         var obj = undefined;
-                        obj = YFunction._FindFromCache(obj_yapi, 'Module', func);
+                        obj = YFunction._FindFromCache('Module', func);
                         if (obj == null) {
-                            obj = new YModule(obj_yapi, func);
-                            YFunction._AddToCache(obj_yapi, 'Module', func, obj);
+                            obj = new YModule(YAPI, func);
+                            YFunction._AddToCache('Module', func, obj);
+                        }
+                        return obj;
+                    }
+                }, {
+                    key: 'FindModuleInContext',
+                    value: function FindModuleInContext(yctx, func) {
+                        var obj = undefined;
+                        obj = YFunction._FindFromCacheInContext(yctx, 'Module', func);
+                        if (obj == null) {
+                            obj = new YModule(yctx, func);
+                            YFunction._AddToCache('Module', func, obj);
                         }
                         return obj;
                     }
                 }, {
                     key: 'FirstModule',
                     value: function FirstModule() {
-                        var obj_yapi = arguments.length <= 0 || arguments[0] === undefined ? YAPI : arguments[0];
-
-                        var next_hwid = obj_yapi.imm_getFirstHardwareId('Module');
+                        var next_hwid = YAPI.imm_getFirstHardwareId('Module');
                         if (next_hwid == null) return null;
-                        return YModule.FindModule(next_hwid, obj_yapi);
+                        return YModule.FindModule(next_hwid);
+                    }
+                }, {
+                    key: 'FirstModuleInContext',
+                    value: function FirstModuleInContext(yctx) {
+                        var next_hwid = yctx.imm_getFirstHardwareId('Module');
+                        if (next_hwid == null) return null;
+                        return YModule.FindModuleInContext(yctx, next_hwid);
                     }
                 }]);
 
@@ -9158,29 +9193,43 @@ System.register('lib/yocto_api.js', ['npm:babel-runtime@5.8.34/helpers/class-cal
 
                         var next_hwid = this._yapi.imm_getNextHardwareId(this._className, resolve.result);
                         if (next_hwid == null) return null;
-                        return YSensor.FindSensor(next_hwid, this._yapi);
+                        return YSensor.FindSensorInContext(this._yapi, next_hwid);
                     }
                 }], [{
                     key: 'FindSensor',
                     value: function FindSensor(func) {
-                        var obj_yapi = arguments.length <= 1 || arguments[1] === undefined ? YAPI : arguments[1];
-
                         var obj = undefined;
-                        obj = YFunction._FindFromCache(obj_yapi, 'Sensor', func);
+                        obj = YFunction._FindFromCache('Sensor', func);
                         if (obj == null) {
-                            obj = new YSensor(obj_yapi, func);
-                            YFunction._AddToCache(obj_yapi, 'Sensor', func, obj);
+                            obj = new YSensor(YAPI, func);
+                            YFunction._AddToCache('Sensor', func, obj);
+                        }
+                        return obj;
+                    }
+                }, {
+                    key: 'FindSensorInContext',
+                    value: function FindSensorInContext(yctx, func) {
+                        var obj = undefined;
+                        obj = YFunction._FindFromCacheInContext(yctx, 'Sensor', func);
+                        if (obj == null) {
+                            obj = new YSensor(yctx, func);
+                            YFunction._AddToCache('Sensor', func, obj);
                         }
                         return obj;
                     }
                 }, {
                     key: 'FirstSensor',
                     value: function FirstSensor() {
-                        var obj_yapi = arguments.length <= 0 || arguments[0] === undefined ? YAPI : arguments[0];
-
-                        var next_hwid = obj_yapi.imm_getFirstHardwareId('Sensor');
+                        var next_hwid = YAPI.imm_getFirstHardwareId('Sensor');
                         if (next_hwid == null) return null;
-                        return YSensor.FindSensor(next_hwid, obj_yapi);
+                        return YSensor.FindSensor(next_hwid);
+                    }
+                }, {
+                    key: 'FirstSensorInContext',
+                    value: function FirstSensorInContext(yctx) {
+                        var next_hwid = yctx.imm_getFirstHardwareId('Sensor');
+                        if (next_hwid == null) return null;
+                        return YSensor.FindSensorInContext(yctx, next_hwid);
                     }
                 }]);
 
