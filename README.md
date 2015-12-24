@@ -1,9 +1,9 @@
-Yoctopuce library for Node.js
-====================================
+Preview of the YEcmaScript 2015 library
+=======================================
 
 ## License information
 
-Copyright (C) 2011 and beyond by Yoctopuce Sarl, Switzerland.
+Copyright (C) 2015 and beyond by Yoctopuce Sarl, Switzerland.
 
 Yoctopuce Sarl (hereafter Licensor) grants to you a perpetual
 non-exclusive license to use, modify, copy and integrate this
@@ -34,63 +34,81 @@ WARRANTY, OR OTHERWISE.
 
 ## Content of this package
 
-* doc/                 HTML interactive help files describing the library
-* example/             Directory with sample code for each device
-* lib/                 Source code of the library (in Javascript)
-* FILES.txt            List of files contained in this archive
-* RELEASE.txt          Release notes
-* index.js             Node.js entry point to load the library
-* package.json         npm's package file
+* **bin/**
+	Misc tools used internally
+* **bundles/**
+	Pretranspiled files
+* **example_html/**
+	Directory with examples that run into a web browser
+* **example_node/**
+	Directory with examples that run on node.js
+* **lib/**
+	Source code of the library (in Javascript)
+* **config.js**
+	jspm's package file
+* **jspm-index.js**
+	Root file for Javascript package manager
+* **LICENCE.TXT**
+	Yoctopuce Licence
+* **npm-index.js**
+	Root file for node package manager
+* **package.json**
+	npm's package file
+
 
 ## Installation
 
-
-This library is published as a 'npm' package. To install our node package you
-have two option:
-
-1. Install it directly form npm with the command
- 	```bash
-	$ npm install yoctolib
-	```
-
-    You do ot need to download the zip file from our web site. npm take care of
-   everything. Note: if you want to install is globally you can add the "-g"
-   option.
-
-2. Install it form our web site. You need to download and extract the
-   	YoctoLib.nodejs.19938.zip file and extract it. Then you have to install
-   	it with the command
-    ```bash
-	$ npm install -g path_to_the yotolib
-	```
-
-
-Where path_to_yoctolib is the path where you have unziped the package. You can
-then import the library to your project with
-```js
-var yoctolib = require('yoctolib');
+Start by installing Node.Js for your system, because you'll need it to install jspm. It's very easy, under Windows you
+only have to run the installer and that's it. Make sure to install it fully, including npm, and add it to the system
+path. Now, you must install jspm on the machine. You can do this very easily with an npm command:
+```bash
+ npm install jspm -g
 ```
 
-In order to use the Javascript library, you will probably need to download
-as well the VirtualHub software for your OS (unless you intend to connect
-directly to a YoctoHub-Ethernet or a YoctoHub-Wireless).
+Then, you can prepare npm and jspm to work with our EcmaScript Yoctopuce library. To do so, go to the library root
+directory and run:
 
-For more details, refer to the documentation specific to each product, which
-includes sample code with explanations, and a programming reference manual.
-In case of trouble, contact support@yoctopuce.com
-
-Have fun !
-
-## Credits
+```bash
+npm install
+jspm install
+```
 
 
-Thanks to @mrose17 of @TheThingSystem for bootstrapping this library
-and sharing his Node.js expertise.
+## Running the library examples
 
-## P.S.
+To transpile and run with Node.JS one of the examples, you can simply use the jspm run command:
 
-If you are interested in direct access to USB devices from node.js
-without using the VirtualHub, Tom Greasley has started a work to
-compile our low-level C library directly into node.js. This is however
-still work in progress, and not yet fully supported as this library
-is. More details on https://github.com/schlafsack/node-yoctopuce
+```bash
+jspm run example_nodejs/Doc-Inventory/inventory.js
+```
+
+
+For HTML examples, it's even simpler: you only have to open the HTML file with a browser, as it is the SystemJS module
+manager which loads and transpiles the code on the fly.
+
+To avoid transpiling the library each time you run the code, because it takes a few seconds, you can ask jspm to
+pre-build a bundle with the translation of all the classes and all the shims needed to run these classes.
+
+Here is how to proceed:
+
+```bash
+jspm bundle lib/yocto_api bundles/yocto_api.js --inject
+```
+
+
+The module manager is then able to automatically intercept all the references to the yocto_api module and to use the
+pre-transpiled bundle instead.
+
+Finally, to make a monolithic compressed file with all the dependencies of a project, as said above, you use the
+following command:
+
+```bash
+jspm bundle-sfx --minify example_html/Doc-Inventory/inventory inventory-sfx.js
+```
+
+
+## More information
+
+* http://www.yoctopuce.com/EN/article/experimenting-with-ecmascript-2015
+* http://www.yoctopuce.com/EN/article/remote-device-control-using-websocket-callbacks
+
