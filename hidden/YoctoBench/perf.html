@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Performance test</title>
+    <script src='../../jspm_packages/system.js'></script>
+    <script src='../../config.js'></script>
+    <script>
+        System.import('hidden/YoctoBench/perf');
+    </script>
+    <!-- When going in production, you can generate a self-contained js file using
+
+    jspm bundle-sfx --minify hidden/YoctoBench/perf.js perf-sfx.js
+
+    and replace the 5 lines above by just this one:
+
+    <script src='perf-sfx.js'></script>
+    -->
+</head>
+<body>
+<h1>Performance test</h1>
+<div id='cout'></div>
+</body>
+</html>

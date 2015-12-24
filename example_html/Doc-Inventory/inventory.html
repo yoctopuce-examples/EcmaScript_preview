@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modules inventory</title>
+  <script src='../../jspm_packages/system.js'></script>
+  <script src='../../config.js'></script>
+  <script>
+    System.import('example_html/Doc-Inventory/inventory');
+  </script>
+  <!-- When going in production, you can generate a self-contained js file using
+
+  jspm bundle-sfx --minify example_html/Doc-Inventory/inventory.js inventory-sfx.js
+
+  and replace the 5 lines above by just this one:
+
+  <script src='inventory-sfx.js'></script>
+  -->
+</head>
+<body>
+  <h1>Device list</h1>
+  <span id='list'></span>
+</body>
+</html>

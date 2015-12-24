@@ -1,0 +1,1123 @@
+<HTML>
+<HEAD>
+<title>EcmaScript API</title>
+<link rel="apple-touch-icon-precomposed" href="data:image/png;base64,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"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<style type="text/css">
+/*********************************************************************
+ *
+ * $Id: yoctolib-cpp-FR.html 22323 2015-12-11 09:48:39Z seb $
+ *
+ * Searchable documentation browser for Yoctopuce Library
+ *
+ * (note: the reference file to edit is yoctolib-cpp-FR.html)
+ *
+ * - - - - - - - - - License information: - - - - - - - - -
+ *
+ * Copyright (C) 2011 and beyond by Yoctopuce Sarl, Switzerland.
+ *
+ * 1) If you have obtained this file from www.yoctopuce.com,
+ *    Yoctopuce Sarl licenses to you (hereafter Licensee) the
+ *    right to use, modify, copy, and integrate this source file
+ *    into your own solution for the sole purpose of interfacing
+ *    a Yoctopuce product with Licensee's solution.
+ *
+ *    The use of this file and all relationship between Yoctopuce
+ *    and Licensee are governed by Yoctopuce General Terms and
+ *    Conditions.
+ *
+ *    THE SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT
+ *    WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING
+ *    WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, FITNESS
+ *    FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO
+ *    EVENT SHALL LICENSOR BE LIABLE FOR ANY INCIDENTAL, SPECIAL,
+ *    INDIRECT OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA,
+ *    COST OF PROCUREMENT OF SUBSTITUTE GOODS, TECHNOLOGY OR
+ *    SERVICES, ANY CLAIMS BY THIRD PARTIES (INCLUDING BUT NOT
+ *    LIMITED TO ANY DEFENSE THEREOF), ANY CLAIMS FOR INDEMNITY OR
+ *    CONTRIBUTION, OR OTHER SIMILAR COSTS, WHETHER ASSERTED ON THE
+ *    BASIS OF CONTRACT, TORT (INCLUDING NEGLIGENCE), BREACH OF
+ *    WARRANTY, OR OTHERWISE.
+ *
+ * 2) If your intent is not to interface with Yoctopuce products,
+ *    you are not entitled to use, read or create any derived
+ *    material from this file.
+ *
+ *********************************************************************/
+BODY
+{ font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-align : justify;
+}
+
+div#BannerLayer
+{ position:absolute;
+  left:0px;
+  top:0px;
+  width:800px;
+  height:80px;
+  overflow:hidden;
+  Font-size:64px;
+  font-weight:bold;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkCAIAAADITs03AAAALHRFWHRDcmVhdGlvbiBUaW1lAFR1ZSAxMyBEZWMgMjAxMSAwNzoyNjozNCArMDEwMCBiImgAAAAHdElNRQfbDA0GIhbUXPxTAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAABGdBTUEAALGPC/xhBQAAAB9JREFUeNpjeP78ORMDAwPT////wTQ+NrHqRvWTrR8AfCxgH0BR2OYAAAAASUVORK5CYII=);
+  }
+div#MarginLayer
+{ position:absolute;
+  left:0px;
+  top:80px;
+  width:250px;
+  height:490px;
+  background-color:#f8f8f8;
+  overflow:auto;
+
+}
+
+div#FunctionsLayer
+{ position:absolute;
+  left:250px;
+  top:80px;
+  width:600px;
+  height:490px;
+  overflow:auto;
+}
+
+div#FooterLayer
+{ position:absolute;
+  left:0px;
+  top:570px;
+  width: 800px;
+  height:30px;
+  background-color: #E0E0E0 ;
+  overflow:hidden;
+}
+
+div#separatorLayer
+{ position:absolute;
+  width:10px;
+  height:470px;
+  border-left:2px solid #b0b0b0 ;
+  overflow:hidden;
+  cursor :col-resize;
+}
+
+div.container
+{ width:100%;
+  height:100%;
+}
+
+span.classheader
+{ display:inline-block;
+  width:100%;
+  background-color:#f0f0f0;
+  padding-top:3px;
+  padding-bottom:3px;
+  margin-bottom:3px;
+  margin-top:px;
+}
+
+A.extLink
+ { color : grey;
+   text-decoration:none;
+   font-size:10px;
+ }
+
+span.classheader A
+ { color: navy;
+   text-decoration:none;
+   font-weight:bold;
+ }
+
+img.expandColapse
+ { vertical-align: middle;
+ }
+
+div.methodsList
+ { margin-top:0px;
+   padding-top:0px;
+   padding-left:10px;
+   margin-bottom:10px;
+ }
+
+div.methodsList A
+ { color: navy;
+   text-decoration:none;
+ }
+
+div#FunctionsLayerInner
+ { margin-left:10px;
+   margin-top:10px;
+   margin-right:20px;
+ }
+
+span.funcHeader
+ { color: navy;
+   text-decoration:none;
+   font-size:25px;
+   margin-botton:20px;
+   font-weight:bold;
+ }
+
+span#pn , td.pn
+ { font-weight:bold;
+   color:#004000;
+
+ }
+
+td.pn
+ {vertical-align:top}
+
+span.paramAndRet
+ {font-weight:bold;
+
+ }
+
+table
+ {font-size:14px;}
+
+span.prototype
+ { margin-left:10px;
+   margin-right:10px;
+   padding-top:5px;
+   padding-bottom:5px;
+   padding-left:5px;
+   padding-right:5px;
+   font-weight:bold;
+   background-color: #f8f8f8;
+   -moz-border-radius: 5px;
+   -webkit-border-top-left-radius:  5px;
+   -webkit-border-top-right-radius: 5px;
+   -webkit-border-bottom-right-radius:  5px;
+   -webkit-border-bottom-left-radius:  5px;
+    color:navy;
+ }
+
+p.protolabel
+ { border-top:1px  solid #f0f0f0;
+ }
+
+P.protoretval
+ { margin-left:20px;}
+
+.paramtable
+ { margin-left:20px; margin-top:0px;}
+
+P.protoretval
+ { margin-left:20px;}
+
+input
+ { border :  1px solid gray;
+   border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-top-left-radius:  2px;
+  -webkit-border-top-right-radius: 2px;
+  -webkit-border-bottom-right-radius:  2px;
+  -webkit-border-bottom-left-radius:  2px;
+ }
+
+td#langdt
+ { vertical-align:bottom;
+   text-align:right;
+   color:#404040;
+ }
+
+td#version
+ { text-align:right;
+   font-size:12px;
+   color:grey;
+ }
+
+p.methodlist
+ { border-top:1px solid #e0e0e0;
+ }
+
+a.protoindex
+ { text-decoration:none;
+   font-weight:bold;
+   color:navy;
+ }
+
+span.synlist
+ { margin-left:10px;
+ }
+
+p.include
+ { font-weight:bold;
+   color:navy;
+   margin-left:20px;
+ }
+</style>
+
+<SCRIPT type="text/JavaScript">
+<!--
+var WinW;
+var WinH;
+
+var plusimage="data:image/gif;base64,R0lGODlhEAAQAIAAAEJCQv///yH5BAAAAP8ALAAAAAAQABAAAAIlhI9pwe2+nmQRAllbpvft8IWdgnAcOXYWpmqt6b2gLE7TZ6N6AQA7";
+var minusimage="data:image/gif;base64,R0lGODlhEAAQAIAAAEJCQv///yH5BAAAAP8ALAAAAAAQABAAAAIihI9pwe2+nmRxvmobzmHnqCAUMIZkd3KjqqWqZ8GTLJl2AQA7";
+
+var marginSize=250;
+var resizeCallBacks= new Array();
+var SVN_Id = '$Id: yoctolib-cpp-FR.html 22323 2015-12-11 09:48:39Z seb $';
+var Version = (SVN_Id.split(' '))[3];
+var doc = new Array();
+
+//--- (generated code: YAPI)
+doc['YAPI']={'':{syn:'Fonctions g\xE9n\xE9rales',inc:'import { YAPI, YModule } from &#039;lib/yocto_api&#039;',cmt:'<p>Ces quelques fonctions g\xE9n\xE9rales permettent l\x27initialisation et la configuration de la librairie Yoctopuce. Dans la plupart des cas, un appel \xE0 <tt>yRegisterHub()</tt> suffira en tout et pour tout. Ensuite, vous pourrez appeler la fonction globale <tt>yFind...()</tt> ou <tt>yFirst...()</tt> correspondant \xE0 votre module pour pouvoir interagir avec lui.</p>'}};
+doc['YAPI']['CheckLogicalName']={syn:'V\xE9rifie si un nom donn\xE9 est valide comme nom logique pour un module ou une fonction.',lib:'YAPI.CheckLogicalName()',pro:'function CheckLogicalName(<span id=pn>name</span>)',cmt:'<p>V\xE9rifie si un nom donn\xE9 est valide comme nom logique pour un module ou une fonction. Un nom logique valide est form\xE9 de 19 caract\xE8res au maximum, choisis parmi <tt>A..Z</tt>, <tt>a..z</tt>, <tt>0..9</tt>, <tt>_</tt> et <tt>-</tt>. Lorsqu\x27on configure un nom logique avec une cha\xEEne incorrecte, les caract\xE8res invalides sont ignor\xE9s.</p>',par:{name:'une cha\xEEne de caract\xE8res contenant le nom v\xE9rifier.'},ret:'<tt>true</tt> si le nom est valide, <tt>false</tt> dans le cas contraire.'};
+doc['YAPI']['DisableExceptions']={syn:'D\xE9sactive l\x27utilisation d\x27exceptions pour la gestion des erreurs.',lib:'YAPI.DisableExceptions()',pro:'function DisableExceptions()',cmt:'<p>D\xE9sactive l\x27utilisation d\x27exceptions pour la gestion des erreurs. Lorsque les exceptions sont d\xE9sactiv\xE9es, chaque fonction retourne une valeur d\x27erreur sp\xE9cifique selon son type, document\xE9e dans ce manuel de r\xE9f\xE9rence.</p>'};
+doc['YAPI']['EnableExceptions']={syn:'R\xE9active l\x27utilisation d\x27exceptions pour la gestion des erreurs.',lib:'YAPI.EnableExceptions()',pro:'function EnableExceptions()',cmt:'<p>R\xE9active l\x27utilisation d\x27exceptions pour la gestion des erreurs. Attention, lorsque les exceptions sont activ\xE9es, tout appel \xE0 une fonction de la librairie qui \xE9choue d\xE9clenche une exception. Dans le cas o\xF9 celle-ci n\x27est pas intercept\xE9e correctement par le code appelant, soit le debugger se lance, soit le programme de l\x27utilisateur est imm\xE9diatement stopp\xE9 (crash).</p>'};
+doc['YAPI']['FreeAPI']={syn:'Lib\xE8re la m\xE9moire dynamique utilis\xE9e par la librairie Yoctopuce.',lib:'YAPI.FreeAPI()',pro:'function FreeAPI()',cmt:'<p>Lib\xE8re la m\xE9moire dynamique utilis\xE9e par la librairie Yoctopuce. Il n\x27est en g\xE9n\xE9ral pas n\xE9cessaire d\x27appeler cette fonction, sauf si vous d\xE9sirez lib\xE9rer tous les blocs de m\xE9moire allou\xE9s dynamiquement dans le but d\x27identifier une source de blocs perdus par exemple. Vous ne devez plus appeler aucune fonction de la librairie apr\xE8s avoir appel\xE9 <tt>yFreeAPI()</tt>, sous peine de crash.</p>'};
+doc['YAPI']['GetAPIVersion']={syn:'Retourne la version de la librairie Yoctopuce utilis\xE9e.',lib:'YAPI.GetAPIVersion()',pro:'function GetAPIVersion()',cmt:'<p>Retourne la version de la librairie Yoctopuce utilis\xE9e. La version est retourn\xE9e sous forme d\x27une cha\xEEne de caract\xE8res au format <tt>\x22Majeure.Mineure.NoBuild\x22</tt>, par exemple <tt>\x221.01.5535\x22</tt>. Pour les langages utilisant une DLL externe (par exemple C#, VisualBasic ou Delphi), la cha\xEEne contient en outre la version de la DLL au m\xEAme format, par exemple <tt>\x221.01.5535 (1.01.5439)\x22</tt>.</p><p> Si vous d\xE9sirez v\xE9rifier dans votre code que la version de la librairie est compatible avec celle que vous avez utilis\xE9 durant le d\xE9veloppement, v\xE9rifiez que le num\xE9ro majeur soit strictement \xE9gal et que le num\xE9ro mineur soit \xE9gal ou sup\xE9rieur. Le num\xE9ro de build n\x27est pas significatif par rapport \xE0 la compatibilit\xE9 de la librairie.</p>',ret:'une cha\xEEne de caract\xE8res d\xE9crivant la version de la librairie.'};
+doc['YAPI']['GetTickCount']={syn:'Retourne la valeur du compteur monotone de temps (en millisecondes).',lib:'YAPI.GetTickCount()',pro:'function GetTickCount()',cmt:'<p>Retourne la valeur du compteur monotone de temps (en millisecondes). Ce compteur peut \xEAtre utilis\xE9 pour calculer des d\xE9lais en rapport avec les modules Yoctopuce, dont la base de temps est aussi la milliseconde.</p>',ret:'un long entier contenant la valeur du compteur de millisecondes.'};
+doc['YAPI']['HandleEvents']={syn:'Maintient la communication de la librairie avec les modules Yoctopuce.',lib:'YAPI.HandleEvents()',pro:'function HandleEvents(<span id=pn>errmsg</span>)',cmt:'<p>Maintient la communication de la librairie avec les modules Yoctopuce. Si votre programme inclut des longues boucles d\x27attente, vous pouvez y inclure un appel \xE0 cette fonction pour que la librairie prenne en charge les informations mise en attente par les modules sur les canaux de communication. Ce n\x27est pas strictement indispensable mais cela peut am\xE9liorer la r\xE9activit\xE9 des la librairie pour les commandes suivantes.</p><p> Cette fonction peut signaler une erreur au cas \xE0 la communication avec un module Yoctopuce ne se passerait pas comme attendu.</p>',par:{errmsg:'une cha\xEEne de caract\xE8res pass\xE9e par r\xE9f\xE9rence, dans laquelle sera stock\xE9 un \xE9ventuel message d\x27erreur.'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['YAPI']['InitAPI']={syn:'Initialise la librairie de programmation de Yoctopuce explicitement.',lib:'YAPI.InitAPI()',pro:'function InitAPI(<span id=pn>mode</span>, <span id=pn>errmsg</span>)',cmt:'<p>Initialise la librairie de programmation de Yoctopuce explicitement. Il n\x27est pas indispensable d\x27appeler <tt>yInitAPI()</tt>, la librairie sera automatiquement initialis\xE9e de toute mani\xE8re au premier appel \xE0 <tt>yRegisterHub()</tt>.</p><p> Lorsque cette fonctin est utilis\xE9e avec comme <tt>mode</tt> la valeur <tt>Y_DETECT_NONE</tt>, il faut explicitement appeler <tt>yRegisterHub()</tt> pour indiquer \xE0 la librairie sur quel VirtualHub les modules sont connect\xE9s, avant d\x27essayer d\x27y acc\xE9der.</p>',par:{mode:'un entier sp\xE9cifiant le type de d\xE9tection automatique de modules \xE0 utiliser. Les valeurs possibles sont <tt>Y_DETECT_NONE</tt>, <tt>Y_DETECT_USB</tt>, <tt>Y_DETECT_NET</tt> et <tt>Y_DETECT_ALL</tt>.',errmsg:'une cha\xEEne de caract\xE8res pass\xE9e par r\xE9f\xE9rence, dans laquelle sera stock\xE9 un \xE9ventuel message d\x27erreur.'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['YAPI']['PreregisterHub']={syn:'Alternative plus tolerante \xE0 RegisterHub().',lib:'YAPI.PreregisterHub()',pro:'function PreregisterHub(<span id=pn>url</span>, <span id=pn>errmsg</span>)',cmt:'<p>Alternative plus tolerante \xE0 RegisterHub(). Cette fonction a le m\xEAme but et la m\xEAme param\xE8tres que la fonction <tt>RegisterHub</tt>, mais contrairement \xE0 celle-ci <tt>PreregisterHub()</tt> ne d\xE9clanche pas d\x27erreur si le hub choisi n\x27est pas joignable au moment de l\x27appel. Il est ainsi possible d\x27enregistrer un hub r\xE9seau ind\xE9pendemment de la connectivit\xE9, afin de tenter de ne le contacter que lorsqu\x27on cherche r\xE9ellement un module.</p>',par:{url:'une cha\xEEne de caract\xE8res contenant <ui>\x22usb\x22</ui>,<ui>\x22callback\x22,</ui> ou l\x27URL racine du VirtualHub \xE0 utiliser.',errmsg:'une cha\xEEne de caract\xE8res pass\xE9e par r\xE9f\xE9rence, dans laquelle sera stock\xE9 un \xE9ventuel message d\x27erreur.'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['YAPI']['RegisterDeviceArrivalCallback']={syn:'Enregistre une fonction de callback qui sera appel\xE9e \xE0 chaque fois qu\x27un module est branch\xE9.',lib:'YAPI.RegisterDeviceArrivalCallback()',pro:'function RegisterDeviceArrivalCallback(<span id=pn>arrivalCallback</span>)',cmt:'<p>Enregistre une fonction de callback qui sera appel\xE9e \xE0 chaque fois qu\x27un module est branch\xE9. Le callback sera appel\xE9 pendant l\x27\xE9xecution de la fonction <tt>yUpdateDeviceList</tt>, que vous devrez appeler r\xE9guli\xE8rement.</p>',par:{arrivalCallback:'une proc\xE9dure qui prend un <tt>YModule</tt> en param\xE8tre, ou <tt>null</tt> pour supprimer un callback d\xE9ja enregistr\xE9.'}};
+doc['YAPI']['RegisterDeviceRemovalCallback']={syn:'Enregistre une fonction de callback qui sera appel\xE9e \xE0 chaque fois qu\x27un module est d\xE9branch\xE9.',lib:'YAPI.RegisterDeviceRemovalCallback()',pro:'function RegisterDeviceRemovalCallback(<span id=pn>removalCallback</span>)',cmt:'<p>Enregistre une fonction de callback qui sera appel\xE9e \xE0 chaque fois qu\x27un module est d\xE9branch\xE9. Le callback sera appel\xE9 pendant l\x27\xE9xecution de la fonction <tt>yUpdateDeviceList</tt>, que vous devrez appeler r\xE9guli\xE8rement.</p>',par:{removalCallback:'une proc\xE9dure qui prend un <tt>YModule</tt> en param\xE8tre, ou <tt>null</tt> pour supprimer un callback d\xE9ja enregistr\xE9.'}};
+doc['YAPI']['RegisterHub']={syn:'Configure la librairie Yoctopuce pour utiliser les modules connect\xE9s sur une machine donn\xE9e.',lib:'YAPI.RegisterHub()',pro:'function RegisterHub(<span id=pn>url</span>, <span id=pn>errmsg</span>)',cmt:'<p>Configure la librairie Yoctopuce pour utiliser les modules connect\xE9s sur une machine donn\xE9e. Le premier param\xE8tre d\xE9termine le fonctionnement de l\x27API, il peut prendre les valeurs suivantes:</p><p> <b>usb</b>: Si vous utilisez le mot-cl\xE9 <ui>usb</ui>, l\x27API utilise les modules Yoctopuce connect\xE9s directement par USB. Certains languages comme PHP, Javascript et Java ne permettent pas un acc\xE8s direct aux couches mat\xE9rielles, <ui>usb</ui> ne marchera donc pas avec ces languages. Dans ce cas, utilisez un VirtualHub ou un YoctoHub r\xE9seau (voir ci-dessous).</p><p> <b><i>x.x.x.x</i></b> ou <b><i>hostname</i></b>: L\x27API utilise les modules connect\xE9s \xE0 la machine dont l\x27adresse IP est <i>x.x.x.x</i>, ou dont le nom d\x27h\xF4te DNS est <i>hostname</i>. Cette machine peut \xEAtre un ordinateur classique faisant tourner un VirtualHub, ou un YoctoHub avec r\xE9seau (YoctoHub-Ethernet / YoctoHub-Wireless). Si vous d\xE9sirez utiliser le VirtualHub tournant sur votre machine locale, utilisez l\x27adresse IP 127.0.0.1.</p><p> <b>callback</b> Le mot-cl\xE9 <ui>callback</ui> permet de faire fonctionnner l\x27API dans un mode app\xE9l\xE9 \x22<i>callback HTTP</i>\x22. C\x27est un mode sp\xE9cial permettant, entre autres, de prendre le contr\xF4le de modules Yoctopuce \xE0 travers un filtre NAT par l\x27interm\xE9diaire d\x27un VirtualHub ou d\x27un Hub Yoctopuce. Il vous suffit de configuer le hub pour qu\x27il appelle votre script \xE0 intervalle r\xE9gulier. Ce mode de fonctionnement n\x27est disponible actuellement qu\x27en PHP et en Node.JS.</p><p> Attention, seule une application peut fonctionner \xE0 la fois sur une machine donn\xE9e en acc\xE8s direct \xE0 USB, sinon il y aurait un conflit d\x27acc\xE8s aux modules. Cela signifie en particulier que vous devez stopper le VirtualHub avant de lancer une application utilisant l\x27acc\xE8s direct \xE0 USB. Cette limitation peut \xEAtre contourn\xE9e en passant par un VirtualHub plut\xF4t que d\x27utiliser directement USB.</p><p> Si vous d\xE9sirez vous connecter \xE0 un Hub, virtuel ou non, sur lequel le controle d\x27acc\xE8s a \xE9t\xE9 activ\xE9, vous devez donner le param\xE8tre url sous la forme:</p><p> <tt>http://nom:mot_de_passe@adresse:port</tt></p><p> Vous pouvez appeller <i>RegisterHub</i> plusieurs fois pour vous connecter \xE0 plusieurs machines diff\xE9rentes.</p>',par:{url:'une cha\xEEne de caract\xE8res contenant <ui>\x22usb\x22</ui>,<ui>\x22callback\x22,</ui> ou l\x27URL racine du VirtualHub \xE0 utiliser.',errmsg:'une cha\xEEne de caract\xE8res pass\xE9e par r\xE9f\xE9rence, dans laquelle sera stock\xE9 un \xE9ventuel message d\x27erreur.'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['YAPI']['Sleep']={syn:'Effectue une pause dans l\x27ex\xE9cution du programme pour une dur\xE9e sp\xE9cifi\xE9e.',lib:'YAPI.Sleep()',pro:'function Sleep(<span id=pn>ms_duration</span>, <span id=pn>errmsg</span>)',cmt:'<p>Effectue une pause dans l\x27ex\xE9cution du programme pour une dur\xE9e sp\xE9cifi\xE9e. L\x27attente est passive, c\x27est-\xE0-dire qu\x27elle n\x27occupe pas significativement le processeur, de sorte \xE0 le laisser disponible pour les autres processus fonctionnant sur la machine. Durant l\x27attente, la librairie va n\xE9anmoins continuer \xE0 lire p\xE9riodiquement les informations en provenance des modules Yoctopuce en appelant la fonction <tt>yHandleEvents()</tt> afin de se maintenir \xE0 jour.</p><p> Cette fonction peut signaler une erreur au cas \xE0 la communication avec un module Yoctopuce ne se passerait pas comme attendu.</p>',par:{ms_duration:'un entier correspondant \xE0 la dur\xE9e de la pause, en millisecondes',errmsg:'une cha\xEEne de caract\xE8res pass\xE9e par r\xE9f\xE9rence, dans laquelle sera stock\xE9 un \xE9ventuel message d\x27erreur.'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['YAPI']['UnregisterHub']={syn:'Configure la librairie Yoctopuce pour ne plus utiliser les modules connect\xE9s sur une machine pr\xE9alablement enregistrer avec RegisterHub.',lib:'YAPI.UnregisterHub()',pro:'function UnregisterHub(<span id=pn>url</span>)',cmt:'<p>Configure la librairie Yoctopuce pour ne plus utiliser les modules connect\xE9s sur une machine pr\xE9alablement enregistrer avec RegisterHub.</p>',par:{url:'une cha\xEEne de caract\xE8res contenant <ui>\x22usb\x22</ui> ou l\x27URL racine du VirtualHub \xE0 ne plus utiliser.'}};
+doc['YAPI']['UpdateDeviceList']={syn:'Force une mise-\xE0-jour de la liste des modules Yoctopuce connect\xE9s.',lib:'YAPI.UpdateDeviceList()',pro:'function UpdateDeviceList(<span id=pn>errmsg</span>)',cmt:'<p>Force une mise-\xE0-jour de la liste des modules Yoctopuce connect\xE9s. La librairie va v\xE9rifier sur les machines ou ports USB pr\xE9c\xE9demment enregistr\xE9s en utilisant la fonction <tt>yRegisterHub</tt> si un module a \xE9t\xE9 connect\xE9 ou d\xE9connect\xE9, et le cas \xE9ch\xE9ant appeler les fonctions de callback d\xE9finies par l\x27utilisateur.</p><p> Cette fonction peut \xEAtre appel\xE9e aussi souvent que d\xE9sir\xE9, afin de rendre l\x27application r\xE9active aux \xE9v\xE9nements de hot-plug.</p>',par:{errmsg:'une cha\xEEne de caract\xE8res pass\xE9e par r\xE9f\xE9rence, dans laquelle sera stock\xE9 un \xE9ventuel message d\x27erreur.'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+//--- (end of generated code: YAPI)
+//--- (generated code: Sensor)
+doc['Sensor']={'':{syn:'Interface des fonctions de type senseur',inc:'import { YAPI, YModule } from &#039;lib/yocto_api&#039;',cmt:'<p>La classe YSensor est la classe parente de tous les senseurs Yoctopuce. Elle permet de lire la valeur courante et l\x27unit\xE9 de n\x27importe quel capteur, de lire les valeurs min/max, de configurer la fr\xE9quence d\x27enregistrement autonome des donn\xE9es et de r\xE9cup\xE9rer les mesures enregistr\xE9es. Elle permet aussi d\x27enregistrer un callback appel\xE9 lorsque la valeur mesur\xE9e change ou \xE0 intervalle pr\xE9d\xE9fini. L\x27utilisation de cette classe plut\xF4t qu\x27une de ces sous-classes permet de cr\xE9er des application g\xE9n\xE9riques, compatibles m\xEAme avec les capteurs Yoctopuce futurs. Note: la classe YAnButton est le seul type d\x27entr\xE9e analogique qui n\x27h\xE9rite pas de YSensor.</p>'}};
+doc['Sensor']['calibrateFromPoints']={syn:'Enregistre des points de correction de mesure, typiquement pour compenser l\x27effet d\x27un bo\xEEtier sur les mesures rendues par le capteur.',lib:'sensor.calibrateFromPoints()',pro:'function calibrateFromPoints(<span id=pn>rawValues</span>, <span id=pn>refValues</span>)',cmt:'<p>Enregistre des points de correction de mesure, typiquement pour compenser l\x27effet d\x27un bo\xEEtier sur les mesures rendues par le capteur. Il est possible d\x27enregistrer jusqu\x27\xE0 cinq points de correction. Les points de correction doivent \xEAtre fournis en ordre croissant, et dans la plage valide du capteur. Le module effectue automatiquement une interpolation lin\xE9aire de l\x27erreur entre les points sp\xE9cifi\xE9s. N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> du module si le r\xE9glage doit \xEAtre pr\xE9serv\xE9.</p><p> Pour plus de plus amples possibilit\xE9s d\x27appliquer une surcalibration aux capteurs, veuillez contacter support@yoctopuce.com.</p>',par:{rawValues:'tableau de nombres flottants, correspondant aux valeurs brutes rendues par le capteur pour les points de correction.',refValues:'tableau de nombres flottants, correspondant aux valeurs corrig\xE9es d\xE9sir\xE9es pour les points de correction.'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['Sensor']['get_recordedData']={syn:'Retourne un objet DataSet repr\xE9sentant des mesures de ce capteur pr\xE9c\xE9demment enregistr\xE9es \xE0 l\x27aide du DataLogger, pour l\x27intervalle de temps sp\xE9cifi\xE9.',lib:'sensor.get_recordedData()',pro:'function get_recordedData(<span id=pn>startTime</span>, <span id=pn>endTime</span>)',cmt:'<p>Retourne un objet DataSet repr\xE9sentant des mesures de ce capteur pr\xE9c\xE9demment enregistr\xE9es \xE0 l\x27aide du DataLogger, pour l\x27intervalle de temps sp\xE9cifi\xE9. Veuillez vous r\xE9f\xE9rer \xE0 la documentation de la classe DataSet pour plus plus d\x27informations sur la mani\xE8re d\x27obtenir un aper\xE7u des mesures pour la p\xE9riode, et comment charger progressivement une grande quantit\xE9 de mesures depuis le dataLogger.</p><p> Cette m\xE9thode ne fonctionne que si le module utilise un firmware r\xE9cent, car les objets DataSet ne sont pas support\xE9s par les firmwares ant\xE9rieurs \xE0 la r\xE9vision 13000.</p>',par:{startTime:'le d\xE9but de l\x27intervalle de mesure d\xE9sir\xE9, c\x27est \xE0 dire en nombre de secondes depuis le 1er janvier 1970 UTC. La valeur 0 peut \xEAtre utilis\xE9e pour ne poser aucune limite sur le d\xE9but des mesures.',endTime:'la find de l\x27intercalle de mesure d\xE9sir\xE9, c\x27est \xE0 dire en nombre de secondes depuis le 1er janvier 1970 UTC. La valeur 0 peut \xEAtre utilis\xE9e pour ne poser aucune limite de fin.'},ret:'une instance de YDataSet, dont les m\xE9thodes permettent de d\x27acc\xE9der aux donn\xE9es historiques souhait\xE9es.'};
+doc['Sensor']['isSensorReady']={syn:'V\xE9rifie si le capteur est actuellement en \xE9tat de transmettre une mesure valide.',lib:'sensor.isSensorReady()',pro:'function isSensorReady()',cmt:'<p>V\xE9rifie si le capteur est actuellement en \xE9tat de transmettre une mesure valide. Retourne faux si le module n\x27est pas joignable, ou que le capteur n\x27a pas de mesure actuelle \xE0 communiquer. Cette fonction ne cause en aucun cas d\x27exception, quelle que soit l\x27erreur qui pourrait se produire lors de la v\xE9rification de joignabilit\xE9.</p>',ret:'<tt>true</tt> si le capteur dispose d\x27une mesure actuelle, <tt>false</tt> sinon'};
+doc['Sensor']['loadCalibrationPoints']={syn:'R\xE9cup\xE8re les points de correction de mesure pr\xE9c\xE9demment enregistr\xE9s \xE0 l\x27aide de la m\xE9thode <tt>calibrateFromPoints</tt>.',lib:'sensor.loadCalibrationPoints()',pro:'function loadCalibrationPoints(<span id=pn>rawValues</span>, <span id=pn>refValues</span>)',cmt:'<p>R\xE9cup\xE8re les points de correction de mesure pr\xE9c\xE9demment enregistr\xE9s \xE0 l\x27aide de la m\xE9thode <tt>calibrateFromPoints</tt>.</p>',par:{rawValues:'tableau de nombres flottants, qui sera rempli par la fonction avec les valeurs brutes des points de correction.',refValues:'tableau de nombres flottants, qui sera rempli par la fonction avec les valeurs d\xE9sir\xE9es des points de correction.'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['Sensor']['registerTimedReportCallback']={syn:'Enregistre la fonction de callback qui est appel\xE9e \xE0 chaque notification p\xE9riodique.',lib:'sensor.registerTimedReportCallback()',pro:'function registerTimedReportCallback(<span id=pn>callback</span>)',cmt:'<p>Enregistre la fonction de callback qui est appel\xE9e \xE0 chaque notification p\xE9riodique. Ce callback n\x27est appel\xE9 que durant l\x27ex\xE9cution de <tt>ySleep</tt> ou <tt>yHandleEvents</tt>. Cela permet \xE0 l\x27appelant de contr\xF4ler quand les callbacks peuvent se produire. Il est important d\x27appeler l\x27une de ces deux fonctions p\xE9riodiquement pour garantir que les callbacks ne soient pas appel\xE9s trop tard. Pour d\xE9sactiver un callback, il suffit d\x27appeler cette m\xE9thode en lui passant un pointeur nul.</p>',par:{callback:'la fonction de callback \xE0 rappeler, ou un pointeur nul. La fonction de callback doit accepter deux arguments: l\x27object fonction dont la valeur a chang\xE9, et un objet YMeasure d\xE9crivant la nouvelle valeur publi\xE9e.'}};
+doc['Sensor']['startDataLogger']={syn:'D\xE9marre l\x27enregistreur de donn\xE9es du module.',lib:'sensor.startDataLogger()',pro:'function startDataLogger()',cmt:'<p>D\xE9marre l\x27enregistreur de donn\xE9es du module. Attention, l\x27enregistreur ne sauvera les mesures de ce capteur que si la fr\xE9quence d\x27enregistrement (logFrequency) n\x27est pas sur \x22OFF\x22.</p>',ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.'};
+doc['Sensor']['stopDataLogger']={syn:'Arr\xEAte l\x27enregistreur de donn\xE9es du module.',lib:'sensor.stopDataLogger()',pro:'function stopDataLogger()',cmt:'<p>Arr\xEAte l\x27enregistreur de donn\xE9es du module.</p>',ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.'};
+//--- (end of generated code: Sensor)
+//--- (generated code: FirmwareUpdate)
+doc['FirmwareUpdate']={'':{syn:'Interface de contr\xF4le pour la mise \xE0 jour de firmware',inc:'import { YAPI, YModule } from &#039;lib/yocto_api&#039;',cmt:'<p>La classe YFirmwareUpdate permet de contr\xF4ler la mise \xE0 jour du de firmware d\x27un module Yoctopuce. Cette classe ne doit pas \xEAtre instancier directement, mais est retourn\xE9e par la m\xE9thode <tt>updateFirmware</tt> de l\x27un objet YModule.</p>'}};
+doc['FirmwareUpdate']['CheckFirmware']={syn:'Test si le fichi\xE9 byn est valid pour le module.',lib:'YFirmwareUpdate.CheckFirmware()',pro:'function CheckFirmware(<span id=pn>serial</span>, <span id=pn>path</span>, <span id=pn>minrelease</span>)',cmt:'<p>Test si le fichi\xE9 byn est valid pour le module. Il est possible de passer un r\xE9pertoire qui contiens plusieurs fichier byn. Dans ce cas cette methode retourne le path du fichier byn compatible le plus r\xE9cent. Cette fonction ignore les firmware qui son plus ancien que minrelease.</p>',par:{serial:'le num\xE9ro de s\xE9rie du module \xE0 mettre \xE0 jour',path:'le path sur un fichier byn ou un r\xE9pertoire contenant plusieurs fichier byn',minrelease:'un entier postitif'},ret:': le path du fichier byn a utiliser ou une chaine vide si aucun firmware plus r\xE9cent est disponible En cas d\x27erreur, retourne une chaine de caract\xE8re qui comment par \x22error:\x22.'};
+doc['FirmwareUpdate']['get_progress']={syn:'Retourne l\x27\xE9tat d\x27avancement de la mise \xE0 jour de firmware, sur une \xE9chelle de 0 \xE0 100.',lib:'firmwareupdate.get_progress()',pro:'function get_progress()',cmt:'<p>Retourne l\x27\xE9tat d\x27avancement de la mise \xE0 jour de firmware, sur une \xE9chelle de 0 \xE0 100. A l\x27instanciation de l\x27objet l\x27avancement est nul. Au fur et \xE0 mesure l\x27avancement progresse pour atteindre la valeur 100. Quand la valeur de 100 est retourn\xE9 la mise \xE0 jour s\x27est termin\xE9e avec succ\xE8s. En cas d\x27erreur pendant la mise \xE0 jour une valeur n\xE9gative est retourn\xE9e et la description de l\x27erreur peu \xEAtre obtenu avec la m\xE9thode <tt>get_progressMessage</tt>.</p>',ret:'un nombre entier entre 0 et 100 repr\xE9sentant l\x27avancement de la mise \xE0 jour du firmware, ou un code d\x27erreur n\xE9gatif en cas de probl\xE8me.'};
+doc['FirmwareUpdate']['get_progressMessage']={syn:'le dernier message de la mise \xE0 jour de firmware.',lib:'firmwareupdate.get_progressMessage()',pro:'function get_progressMessage()',cmt:'<p>le dernier message de la mise \xE0 jour de firmware. En cas d\x27erreur durant la mise \xE0 jour le message d\x27erreur est retourn\xE9.</p>',ret:'un cha\xEEne de caract\xE8re avec le dernier message, ou le message d\x27erreur si la mise \xE0 jour n\x27a pas r\xE9ussi'};
+doc['FirmwareUpdate']['startUpdate']={syn:'D\xE9marre la mise \xE0 jour de firmware.',lib:'firmwareupdate.startUpdate()',pro:'function startUpdate()',cmt:'<p>D\xE9marre la mise \xE0 jour de firmware. La m\xE9thode d\xE9marre en arri\xE8re plan le processus de mise \xE0 jour de firmware. Cet m\xE9thode rend la main imm\xE9diatement. l\x27\xE9tat d\x27avancement de la mise \xE0 jour peut \xEAtre suivit \xE0 l\x27aide des m\xE9thodes <tt>get_progress()</tt> et <tt>get_progressMessage()</tt>.</p>',ret:'un nombre entier entre 0 et 100 repr\xE9sentant l\x27avancement de la mise \xE0 jour du firmware, ou un code d\x27erreur n\xE9gatif en cas de probl\xE8me.',ext:'En cas d\x27erreur, un code d\x27erreur n\xE9gatif.'};
+//--- (end of generated code: FirmwareUpdate)
+//--- (generated code: Module)
+var Language='EcmaScript';
+var IncludeLabel='Pour utiliser les fonctions d&eacute;crites ici, vous devez inclure:';
+var ParamLabel='Param&egrave;tres :';
+var ReturnLabel='Retourne :';
+var AbbrevHint='L\x27API supporte deux syntaxes, une premi&egrave;re purement orient&eacute;e objet, et une seconde abr&eacute;g&eacute;e.';
+var NotFound='Aucune correspondance trouv&eacute;e';
+var AbbrevLabel='Utiliser les noms abr&eacute;g&eacute;s';
+var UseShortcuts=false;
+var sub={YAPI_SUCCESS:'YAPI.SUCCESS',YAPI_NOT_INITIALIZED:'YAPI.NOT_INITIALIZED',YAPI_INVALID_ARGUMENT:'YAPI.INVALID_ARGUMENT',YAPI_NOT_SUPPORTED:'YAPI.NOT_SUPPORTED',YAPI_DEVICE_NOT_FOUND:'YAPI.DEVICE_NOT_FOUND',YAPI_VERSION_MISMATCH:'YAPI.VERSION_MISMATCH',YAPI_DEVICE_BUSY:'YAPI.DEVICE_BUSY',YAPI_TIMEOUT:'YAPI.TIMEOUT',YAPI_IO_ERROR:'YAPI.IO_ERROR',YAPI_NO_MORE_DATA:'YAPI.NO_MORE_DATA',YAPI_EXHAUSTED:'YAPI.EXHAUSTED',YAPI_DOUBLE_ACCES:'YAPI.DOUBLE_ACCES',YAPI_UNAUTHORIZED:'YAPI.UNAUTHORIZED',YAPI_RTC_NOT_READY:'YAPI.RTC_NOT_READY',YAPI_FILE_NOT_FOUND:'YAPI.FILE_NOT_FOUND',null:'null'};
+doc['Module']={'':{syn:'Interface de contr\xF4le du module',inc:'import { YAPI, YModule } from &#039;lib/yocto_api&#039;',cmt:'<p>Cette interface est la m\xEAme pour tous les modules USB de Yoctopuce. Elle permet de contr\xF4ler les param\xE8tres g\xE9n\xE9raux du module, et d\x27\xE9num\xE9rer les fonctions fournies par chaque module.</p>'}};
+doc['Module']['FindModule']={syn:'Permet de retrouver un module d\x27apr\xE8s son num\xE9ro de s\xE9rie ou son nom logique.',lib:'YModule.FindModule()',pro:'function FindModule(<span id=pn>func</span>, <span id=pn>obj_yapi</span>, <span id=pn>YAPI</span>)',cmt:'<p>Permet de retrouver un module d\x27apr\xE8s son num\xE9ro de s\xE9rie ou son nom logique.</p><p> Cette fonction n\x27exige pas que le module soit en ligne au moment ou elle est appel\xE9e, l\x27objet retourn\xE9 sera n\xE9anmoins valide. Utiliser la m\xE9thode <tt>YModule.isOnline()</tt> pour tester si le module est utilisable \xE0 un moment donn\xE9. En cas d\x27ambigu\xEFt\xE9 lorsqu\x27on fait une recherche par nom logique, aucune erreur ne sera notifi\xE9e: la premi\xE8re instance trouv\xE9e sera renvoy\xE9e. La recherche se fait d\x27abord par nom mat\xE9riel, puis par nom logique.</p>',par:{func:'une cha\xEEne de caract\xE8res contenant soit le num\xE9ro de s\xE9rie, soit le nom logique du module d\xE9sir\xE9'},ret:'un objet de classe <tt>YModule</tt> qui permet ensuite de contr\xF4ler le module ou d\x27obtenir de plus amples informations sur le module.'};
+doc['Module']['FirstModule']={syn:'Commence l\x27\xE9num\xE9ration des modules accessibles par la librairie.',lib:'YModule.FirstModule()',pro:'function FirstModule(<span id=pn>obj_yapi</span>, <span id=pn>YAPI</span>)',cmt:'<p>Commence l\x27\xE9num\xE9ration des modules accessibles par la librairie. Utiliser la fonction <tt>YModule.nextModule()</tt> pour it\xE9rer sur les autres modules.</p>',ret:'un pointeur sur un objet <tt>YModule</tt>, correspondant au premier module accessible en ligne, ou <tt>null</tt> si aucun module n\x27a \xE9t\xE9 trouv\xE9.'};
+doc['Module']['checkFirmware']={syn:'Test si le fichi\xE9 byn est valid pour le module.',lib:'module.checkFirmware()',pro:'function checkFirmware(<span id=pn>path</span>, <span id=pn>onlynew</span>)',cmt:'<p>Test si le fichi\xE9 byn est valid pour le module. Cette methode est utile pour tester si il est n\xE9cessaire de mettre \xE0 jour le module avec un nouveau firmware. Il est possible de passer un r\xE9pertoire qui contiens plusieurs fichier byn. Dans ce cas cette methode retourne le path du fichier byn compatible le plus r\xE9cent. Si le parametre onlynew est vrais les firmware \xE9quivalent ou plus ancien au firmware install\xE9 sont ignor\xE9s.</p>',par:{path:'le path sur un fichier byn ou un r\xE9pertoire contenant plusieurs fichier byn',onlynew:'retourne uniquement les fichier strictement plus r\xE9cent'},ret:': le path du fichier byn a utiliser ou une chaine vide si aucun firmware plus r\xE9cent est disponible En cas d\x27erreur, d\xE9clenche une exception ou retourne une chaine de caract\xE8re qui comment par \x22error:\x22.'};
+doc['Module']['clearCache']={syn:'Invalide le cache.',lib:'module.clearCache()',pro:'function clearCache()',cmt:'<p>Invalide le cache. Invalide le cache des valeurs courantes du module. Force le prochain appel \xE0 une m\xE9thode get_xxx() ou loadxxx() pour charger les les donn\xE9es depuis le module.</p>'};
+doc['Module']['describe']={syn:'Retourne un court texte d\xE9crivant le module.',lib:'module.describe()',pro:'function describe()',cmt:'<p>Retourne un court texte d\xE9crivant le module. Ce texte peut contenir soit le nom logique du module, soit son num\xE9ro de s\xE9rie.</p>',ret:'une cha\xEEne de caract\xE8res d\xE9crivant le module'};
+doc['Module']['download']={syn:'T\xE9l\xE9charge le fichier choisi du module et retourne son contenu.',lib:'module.download()',pro:'function download(<span id=pn>pathname</span>)',cmt:'<p>T\xE9l\xE9charge le fichier choisi du module et retourne son contenu.</p>',par:{pathname:'nom complet du fichier'},ret:'le contenu du fichier charg\xE9',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne <tt>YAPI_INVALID_STRING</tt>.'};
+doc['Module']['functionCount']={syn:'Retourne le nombre de fonctions (sans compter l\x27interface \x22module\x22) existant sur le module.',lib:'module.functionCount()',pro:'function functionCount()',cmt:'<p>Retourne le nombre de fonctions (sans compter l\x27interface \x22module\x22) existant sur le module.</p>',ret:'le nombre de fonctions sur le module',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['Module']['functionId']={syn:'Retourne l\x27identifiant mat\xE9riel de la <i>n</i>i\xE8me fonction du module.',lib:'module.functionId()',pro:'function functionId(<span id=pn>functionIndex</span>)',cmt:'<p>Retourne l\x27identifiant mat\xE9riel de la <i>n</i>i\xE8me fonction du module.</p>',par:{functionIndex:'l\x27index de la fonction pour laquelle l\x27information est d\xE9sir\xE9e, en commen\xE7ant \xE0 0 pour la premi\xE8re fonction.'},ret:'une cha\xEEne de caract\xE8res correspondant \xE0 l\x27identifiant mat\xE9riel unique de la fonction d\xE9sir\xE9e',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un cha\xEEne vide.'};
+doc['Module']['functionName']={syn:'Retourne le nom logique de la <i>n</i>i\xE8me fonction du module.',lib:'module.functionName()',pro:'function functionName(<span id=pn>functionIndex</span>)',cmt:'<p>Retourne le nom logique de la <i>n</i>i\xE8me fonction du module.</p>',par:{functionIndex:'l\x27index de la fonction pour laquelle l\x27information est d\xE9sir\xE9e, en commen\xE7ant \xE0 0 pour la premi\xE8re fonction.'},ret:'une cha\xEEne de caract\xE8res correspondant au nom logique de la fonction d\xE9sir\xE9e',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un cha\xEEne vide.'};
+doc['Module']['functionType']={syn:'Retourne le type de la <i>n</i>i\xE8me fonction du module.',lib:'module.functionType()',pro:'function functionType(<span id=pn>functionIndex</span>)',cmt:'<p>Retourne le type de la <i>n</i>i\xE8me fonction du module.</p>',par:{functionIndex:'l\x27index de la fonction pour laquelle l\x27information est d\xE9sir\xE9e, en commen\xE7ant \xE0 0 pour la premi\xE8re fonction.'},ret:'une cha\xEEne de caract\xE8res correspondant au type de la fonction',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un cha\xEEne vide.'};
+doc['Module']['functionValue']={syn:'Retourne la valeur publi\xE9e par la <i>n</i>i\xE8me fonction du module.',lib:'module.functionValue()',pro:'function functionValue(<span id=pn>functionIndex</span>)',cmt:'<p>Retourne la valeur publi\xE9e par la <i>n</i>i\xE8me fonction du module.</p>',par:{functionIndex:'l\x27index de la fonction pour laquelle l\x27information est d\xE9sir\xE9e, en commen\xE7ant \xE0 0 pour la premi\xE8re fonction.'},ret:'une cha\xEEne de caract\xE8res correspondant \xE0 la valeur publi\xE9e par la fonction d\xE9sir\xE9e',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un cha\xEEne vide.'};
+doc['Module']['get_allSettings']={syn:'Retourne tous les param\xE8tres du module.',lib:'module.get_allSettings()',pro:'function get_allSettings()',cmt:'<p>Retourne tous les param\xE8tres du module. Utile pour sauvgarder les noms logiques, les calibrations et fichies upload\xE9s du module.</p>',ret:'un buffer binaire avec tous les param\xE8tres En cas d\x27erreur, d\xE9clenche une exception ou retourne un objet binaire de taille 0.'};
+doc['Module']['get_beacon']={syn:'Retourne l\x27\xE9tat de la balise de localisation.',lib:'module.get_beacon()',pro:'function get_beacon()',cmt:'<p>Retourne l\x27\xE9tat de la balise de localisation.</p>',ret:'soit <tt>Y_BEACON_OFF</tt>, soit <tt>Y_BEACON_ON</tt>, selon l\x27\xE9tat de la balise de localisation',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_BEACON_INVALID</tt>.'};
+doc['Module']['get_errorMessage']={syn:'Retourne le message correspondant \xE0 la derni\xE8re erreur survenue lors de l\x27utilisation de l\x27objet module.',lib:'module.get_errorMessage()',pro:'function get_errorMessage()',cmt:'<p>Retourne le message correspondant \xE0 la derni\xE8re erreur survenue lors de l\x27utilisation de l\x27objet module. Cette m\xE9thode est principalement utile lorsque la librairie Yoctopuce est utilis\xE9e en d\xE9sactivant la gestion des exceptions.</p>',ret:'une cha\xEEne de caract\xE8res correspondant au message de la derni\xE8re erreur qui s\x27est produit lors de l\x27utilisation du module'};
+doc['Module']['get_errorType']={syn:'Retourne le code d\x27erreur correspondant \xE0 la derni\xE8re erreur survenue lors de l\x27utilisation de l\x27objet module.',lib:'module.get_errorType()',pro:'function get_errorType()',cmt:'<p>Retourne le code d\x27erreur correspondant \xE0 la derni\xE8re erreur survenue lors de l\x27utilisation de l\x27objet module. Cette m\xE9thode est principalement utile lorsque la librairie Yoctopuce est utilis\xE9e en d\xE9sactivant la gestion des exceptions.</p>',ret:'un nombre correspondant au code de la derni\xE8re erreur qui s\x27est produit lors de l\x27utilisation du module'};
+doc['Module']['get_firmwareRelease']={syn:'Retourne la version du logiciel embarqu\xE9 du module.',lib:'module.get_firmwareRelease()',pro:'function get_firmwareRelease()',cmt:'<p>Retourne la version du logiciel embarqu\xE9 du module.</p>',ret:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant la version du logiciel embarqu\xE9 du module',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_FIRMWARERELEASE_INVALID</tt>.'};
+doc['Module']['get_functionIds']={syn:'Retourne les identifiants mat\xE9riel des fonctions correspondant au type pass\xE9 en argument.',lib:'module.get_functionIds()',pro:'function get_functionIds(<span id=pn>funType</span>)',cmt:'<p>Retourne les identifiants mat\xE9riel des fonctions correspondant au type pass\xE9 en argument.</p>',par:{funType:'Le type de fonction (Relay, LightSensor, Voltage,...)'},ret:': Un tableau de chaine de caract\xE8re.'};
+doc['Module']['get_hardwareId']={syn:'Retourne l\x27identifiant unique du module.',lib:'module.get_hardwareId()',pro:'function get_hardwareId()',cmt:'<p>Retourne l\x27identifiant unique du module. L\x27identifiant unique est compos\xE9 du num\xE9ro de s\xE9rie du module suivi de la cha\xEEne \x22.module\x22.</p>',ret:'une cha\xEEne de caract\xE8res identifiant la fonction'};
+doc['Module']['get_icon2d']={syn:'Retourne l\x27ic\xF4ne du module.',lib:'module.get_icon2d()',pro:'function get_icon2d()',cmt:'<p>Retourne l\x27ic\xF4ne du module. L\x27icone est au format PNG et a une taille maximale de 1536 octets.</p>',ret:'un buffer binaire contenant l\x27icone, au format png. En cas d\x27erreur, d\xE9clenche une exception ou retourne <tt>YAPI_INVALID_STRING</tt>.'};
+doc['Module']['get_lastLogs']={syn:'Retourne une chaine de charact\xE8re contenant les derniers logs du module.',lib:'module.get_lastLogs()',pro:'function get_lastLogs()',cmt:'<p>Retourne une chaine de charact\xE8re contenant les derniers logs du module. Cette methode retourne les derniers logs qui sont encore stock\xE9 dans le module.</p>',ret:'une chaine de charact\xE8re contenant les derniers logs du module. En cas d\x27erreur, d\xE9clenche une exception ou retourne <tt>YAPI_INVALID_STRING</tt>.'};
+doc['Module']['get_logicalName']={syn:'Retourne le nom logique du module.',lib:'module.get_logicalName()',pro:'function get_logicalName()',cmt:'<p>Retourne le nom logique du module.</p>',ret:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant le nom logique du module',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_LOGICALNAME_INVALID</tt>.'};
+doc['Module']['get_luminosity']={syn:'Retourne la luminosit\xE9 des leds informatives du module (valeur entre 0 et 100).',lib:'module.get_luminosity()',pro:'function get_luminosity()',cmt:'<p>Retourne la luminosit\xE9 des leds informatives du module (valeur entre 0 et 100).</p>',ret:'un entier repr&eacute;sentant la luminosit\xE9 des leds informatives du module (valeur entre 0 et 100)',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_LUMINOSITY_INVALID</tt>.'};
+doc['Module']['get_persistentSettings']={syn:'Retourne l\x27\xE9tat courant des r\xE9glages persistents du module.',lib:'module.get_persistentSettings()',pro:'function get_persistentSettings()',cmt:'<p>Retourne l\x27\xE9tat courant des r\xE9glages persistents du module.</p>',ret:'une valeur parmi <tt>Y_PERSISTENTSETTINGS_LOADED</tt>, <tt>Y_PERSISTENTSETTINGS_SAVED</tt> et <tt>Y_PERSISTENTSETTINGS_MODIFIED</tt> repr&eacute;sentant l\x27\xE9tat courant des r\xE9glages persistents du module',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_PERSISTENTSETTINGS_INVALID</tt>.'};
+doc['Module']['get_productId']={syn:'Retourne l\x27identifiant USB du module, pr\xE9programm\xE9 en usine.',lib:'module.get_productId()',pro:'function get_productId()',cmt:'<p>Retourne l\x27identifiant USB du module, pr\xE9programm\xE9 en usine.</p>',ret:'un entier repr&eacute;sentant l\x27identifiant USB du module, pr\xE9programm\xE9 en usine',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_PRODUCTID_INVALID</tt>.'};
+doc['Module']['get_productName']={syn:'Retourne le nom commercial du module, pr\xE9programm\xE9 en usine.',lib:'module.get_productName()',pro:'function get_productName()',cmt:'<p>Retourne le nom commercial du module, pr\xE9programm\xE9 en usine.</p>',ret:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant le nom commercial du module, pr\xE9programm\xE9 en usine',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_PRODUCTNAME_INVALID</tt>.'};
+doc['Module']['get_productRelease']={syn:'Retourne le num\xE9ro de version mat\xE9riel du module, pr\xE9programm\xE9 en usine.',lib:'module.get_productRelease()',pro:'function get_productRelease()',cmt:'<p>Retourne le num\xE9ro de version mat\xE9riel du module, pr\xE9programm\xE9 en usine.</p>',ret:'un entier repr&eacute;sentant le num\xE9ro de version mat\xE9riel du module, pr\xE9programm\xE9 en usine',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_PRODUCTRELEASE_INVALID</tt>.'};
+doc['Module']['get_rebootCountdown']={syn:'Retourne le nombre de secondes restantes avant un red\xE9marrage du module, ou z\xE9ro si aucun red\xE9marrage n\x27a \xE9t\xE9 agend\xE9.',lib:'module.get_rebootCountdown()',pro:'function get_rebootCountdown()',cmt:'<p>Retourne le nombre de secondes restantes avant un red\xE9marrage du module, ou z\xE9ro si aucun red\xE9marrage n\x27a \xE9t\xE9 agend\xE9.</p>',ret:'un entier repr&eacute;sentant le nombre de secondes restantes avant un red\xE9marrage du module, ou z\xE9ro si aucun red\xE9marrage n\x27a \xE9t\xE9 agend\xE9',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_REBOOTCOUNTDOWN_INVALID</tt>.'};
+doc['Module']['get_serialNumber']={syn:'Retourne le num\xE9ro de s\xE9rie du module, pr\xE9programm\xE9 en usine.',lib:'module.get_serialNumber()',pro:'function get_serialNumber()',cmt:'<p>Retourne le num\xE9ro de s\xE9rie du module, pr\xE9programm\xE9 en usine.</p>',ret:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant le num\xE9ro de s\xE9rie du module, pr\xE9programm\xE9 en usine',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_SERIALNUMBER_INVALID</tt>.'};
+doc['Module']['get_upTime']={syn:'Retourne le numbre de millisecondes \xE9coul\xE9es depuis la mise sous tension du module ',lib:'module.get_upTime()',pro:'function get_upTime()',cmt:'<p>Retourne le numbre de millisecondes \xE9coul\xE9es depuis la mise sous tension du module</p>',ret:'un entier repr&eacute;sentant le numbre de millisecondes \xE9coul\xE9es depuis la mise sous tension du module',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_UPTIME_INVALID</tt>.'};
+doc['Module']['get_usbCurrent']={syn:'Retourne le courant consomm\xE9 par le module sur le bus USB, en milliamp\xE8res.',lib:'module.get_usbCurrent()',pro:'function get_usbCurrent()',cmt:'<p>Retourne le courant consomm\xE9 par le module sur le bus USB, en milliamp\xE8res.</p>',ret:'un entier repr&eacute;sentant le courant consomm\xE9 par le module sur le bus USB, en milliamp\xE8res',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_USBCURRENT_INVALID</tt>.'};
+doc['Module']['get_userData']={syn:'Retourne le contenu de l\x27attribut userData, pr\xE9c\xE9demment stock\xE9 \xE0 l\x27aide de la m\xE9thode <tt>set_userData</tt>.',lib:'module.get_userData()',pro:'function get_userData()',cmt:'<p>Retourne le contenu de l\x27attribut userData, pr\xE9c\xE9demment stock\xE9 \xE0 l\x27aide de la m\xE9thode <tt>set_userData</tt>. Cet attribut n\x27es pas utilis\xE9 directement par l\x27API. Il est \xE0 la disposition de l\x27appelant pour stocker un contexte.</p>',ret:'l\x27objet stock\xE9 pr\xE9c\xE9demment par l\x27appelant.'};
+doc['Module']['get_userVar']={syn:'Retourne la valeur enti\xE8re pr\xE9c\xE9demment stock\xE9e dans cet attribut.',lib:'module.get_userVar()',pro:'function get_userVar()',cmt:'<p>Retourne la valeur enti\xE8re pr\xE9c\xE9demment stock\xE9e dans cet attribut. Au d\xE9marrage du module (ou apr\xE8s un red\xE9marrage), la valeur est toujours z\xE9ro.</p>',ret:'un entier repr&eacute;sentant la valeur enti\xE8re pr\xE9c\xE9demment stock\xE9e dans cet attribut',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_USERVAR_INVALID</tt>.'};
+doc['Module']['hasFunction']={syn:'Test la pr\xE9sence d\x27une fonction pour le module courant.',lib:'module.hasFunction()',pro:'function hasFunction(<span id=pn>funcId</span>)',cmt:'<p>Test la pr\xE9sence d\x27une fonction pour le module courant. La m\xE9thode prend en param\xE9tr\xE8 l\x27identifiant de la fonction (relay1, voltage2,...) et retourne un bool\xE9en.</p>',par:{funcId:'identifiant mat\xE9riel de la fonction'},ret:': vrais si le module poss\xE8de la fonction.'};
+doc['Module']['isOnline']={syn:'V\xE9rifie si le module est joignable, sans d\xE9clencher d\x27erreur.',lib:'module.isOnline()',pro:'function isOnline()',cmt:'<p>V\xE9rifie si le module est joignable, sans d\xE9clencher d\x27erreur. Si les valeurs des attributs du module en cache sont valides au moment de l\x27appel, le module est consid\xE9r\xE9 joignable. Cette fonction ne cause en aucun cas d\x27exception, quelle que soit l\x27erreur qui pourrait se produire lors de la v\xE9rification de joignabilit\xE9.</p>',ret:'<tt>true</tt> si le module est joignable, <tt>false</tt> sinon'};
+doc['Module']['load']={syn:'Met en cache les valeurs courantes du module, avec une dur\xE9e de validit\xE9 sp\xE9cifi\xE9e.',lib:'module.load()',pro:'function load(<span id=pn>msValidity</span>)',cmt:'<p>Met en cache les valeurs courantes du module, avec une dur\xE9e de validit\xE9 sp\xE9cifi\xE9e. Par d\xE9faut, lorsqu\x27on acc\xE8de \xE0 un module, tous les attributs des fonctions du module sont automatiquement mises en cache pour la dur\xE9e standard (5 ms). Cette m\xE9thode peut \xEAtre utilis\xE9e pour marquer occasionellement les donn\xE9es cach\xE9es comme valides pour une plus longue p\xE9riode, par exemple dans le but de r\xE9duire le trafic r\xE9seau.</p>',par:{msValidity:'un entier correspondant \xE0 la dur\xE9e de validit\xE9 attribu\xE9e aux les param\xE8tres charg\xE9s, en millisecondes'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['Module']['nextModule']={syn:'Continue l\x27\xE9num\xE9ration des modules commenc\xE9e \xE0 l\x27aide de <tt>yFirstModule()</tt>.',lib:'module.nextModule()',pro:'function nextModule()',cmt:'<p>Continue l\x27\xE9num\xE9ration des modules commenc\xE9e \xE0 l\x27aide de <tt>yFirstModule()</tt>.</p>',ret:'un pointeur sur un objet <tt>YModule</tt> accessible en ligne, ou <tt>null</tt> lorsque l\x27\xE9num\xE9ration est termin\xE9e.'};
+doc['Module']['reboot']={syn:'Agende un simple red\xE9marrage du module dans un nombre donn\xE9 de secondes.',lib:'module.reboot()',pro:'function reboot(<span id=pn>secBeforeReboot</span>)',cmt:'<p>Agende un simple red\xE9marrage du module dans un nombre donn\xE9 de secondes.</p>',par:{secBeforeReboot:'nombre de secondes avant de red\xE9marrer'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['Module']['revertFromFlash']={syn:'Recharge les r\xE9glages stock\xE9s dans le m\xE9moire non volatile du module, comme \xE0 la mise sous tension du module.',lib:'module.revertFromFlash()',pro:'function revertFromFlash()',cmt:'<p>Recharge les r\xE9glages stock\xE9s dans le m\xE9moire non volatile du module, comme \xE0 la mise sous tension du module.</p>',ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['Module']['saveToFlash']={syn:'Sauve les r\xE9glages courants dans la m\xE9moire non volatile du module.',lib:'module.saveToFlash()',pro:'function saveToFlash()',cmt:'<p>Sauve les r\xE9glages courants dans la m\xE9moire non volatile du module. Attention le nombre total de sauvegardes possibles durant la vie du module est limit\xE9 (environ 100000 cycles). N\x27appelez pas cette fonction dans une boucle.</p>',ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['Module']['set_allSettings']={syn:'Restore tous les param\xE8tres du module.',lib:'module.set_allSettings()',pro:'function set_allSettings(<span id=pn>settings</span>)',cmt:'<p>Restore tous les param\xE8tres du module. Utile pour restorer les noms logiques et les calibrations du module depuis un sauvgarde. N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> du module si les r\xE9glages doivent \xEAtre pr\xE9serv\xE9s.</p>',par:{settings:'un buffer binaire avec touts les param\xE8tres'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['Module']['set_allSettingsAndFiles']={syn:'Restore tous les param\xE8tres type les fichier uploader du module.',lib:'module.set_allSettingsAndFiles()',pro:'function set_allSettingsAndFiles(<span id=pn>settings</span>)',cmt:'<p>Restore tous les param\xE8tres type les fichier uploader du module. Utile pour restorer les noms logiques type les calibrations, le fichiers upload\xE9s etc du module depuis un sauvgarde. N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> du module si les r\xE9glages doivent \xEAtre pr\xE9serv\xE9s.</p>',par:{settings:'un buffer binaire avec touts les param\xE8tres'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['Module']['set_beacon']={syn:'Allume ou \xE9teint la balise de localisation du module.',lib:'module.set_beacon()',pro:'function set_beacon(<span id=pn>newval</span>)',cmt:'<p>Allume ou \xE9teint la balise de localisation du module.</p>',par:{newval:'soit <tt>Y_BEACON_OFF</tt>, soit <tt>Y_BEACON_ON</tt>'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op&eacute;ration se d&eacute;roule sans erreur.',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne un code d\x27erreur n&eacute;gatif.'};
+doc['Module']['set_logicalName']={syn:'Change le nom logique du module.',lib:'module.set_logicalName()',pro:'function set_logicalName(<span id=pn>newval</span>)',cmt:'<p>Change le nom logique du module. Vous pouvez utiliser <tt>yCheckLogicalName()</tt> pour v\xE9rifier si votre param\xE8tre est valide. N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> du module si le r\xE9glage doit \xEAtre pr\xE9serv\xE9.</p>',par:{newval:'une cha&icirc;ne de caract&egrave;res'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op&eacute;ration se d&eacute;roule sans erreur.',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne un code d\x27erreur n&eacute;gatif.'};
+doc['Module']['set_luminosity']={syn:'Modifie la luminosit\xE9 des leds informatives du module.',lib:'module.set_luminosity()',pro:'function set_luminosity(<span id=pn>newval</span>)',cmt:'<p>Modifie la luminosit\xE9 des leds informatives du module. Le param\xEAtre est une valeur entre 0 et 100. N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> du module si le r\xE9glage doit \xEAtre pr\xE9serv\xE9.</p>',par:{newval:'un entier repr&eacute;sentant la luminosit\xE9 des leds informatives du module'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op&eacute;ration se d&eacute;roule sans erreur.',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne un code d\x27erreur n&eacute;gatif.'};
+doc['Module']['set_userData']={syn:'Enregistre un contexte libre dans l\x27attribut userData de la fonction, afin de le retrouver plus tard \xE0 l\x27aide de la m\xE9thode <tt>get_userData</tt>.',lib:'module.set_userData()',pro:'function set_userData(<span id=pn>data</span>)',cmt:'<p>Enregistre un contexte libre dans l\x27attribut userData de la fonction, afin de le retrouver plus tard \xE0 l\x27aide de la m\xE9thode <tt>get_userData</tt>. Cet attribut n\x27es pas utilis\xE9 directement par l\x27API. Il est \xE0 la disposition de l\x27appelant pour stocker un contexte.</p>',par:{data:'objet quelconque \xE0 m\xE9moriser'}};
+doc['Module']['set_userVar']={syn:'Retourne la valeur enti\xE8re pr\xE9c\xE9demment stock\xE9e dans cet attribut.',lib:'module.set_userVar()',pro:'function set_userVar(<span id=pn>newval</span>)',cmt:'<p>Retourne la valeur enti\xE8re pr\xE9c\xE9demment stock\xE9e dans cet attribut. Au d\xE9marrage du module (ou apr\xE8s un red\xE9marrage), la valeur est toujours z\xE9ro.</p>',par:{newval:'un entier'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op&eacute;ration se d&eacute;roule sans erreur.',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne un code d\x27erreur n&eacute;gatif.'};
+doc['Module']['triggerFirmwareUpdate']={syn:'Agende un red\xE9marrage du module en mode sp\xE9cial de reprogrammation du logiciel embarqu\xE9.',lib:'module.triggerFirmwareUpdate()',pro:'function triggerFirmwareUpdate(<span id=pn>secBeforeReboot</span>)',cmt:'<p>Agende un red\xE9marrage du module en mode sp\xE9cial de reprogrammation du logiciel embarqu\xE9.</p>',par:{secBeforeReboot:'nombre de secondes avant de red\xE9marrer'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['Module']['updateFirmware']={syn:'Prepare une mise \xE0 jour de firmware du module.',lib:'module.updateFirmware()',pro:'function updateFirmware(<span id=pn>path</span>)',cmt:'<p>Prepare une mise \xE0 jour de firmware du module. Cette methode un object <tt>YFirmwareUpdate</tt> qui est utilis\xE9 pour mettre \xE0 jour le firmware du module.</p>',par:{path:'le path sur un fichier byn'},ret:': Un object <tt>YFirmwareUpdate</tt> ou NULL en car d\x27erreur'};
+//--- (end of generated code: Module)
+//--- (generated code: OsControl)
+doc['OsControl']={'':{syn:'contr\xF4le d\x27OS',inc:'import YOsControl from &#039;lib/oscontrol&#039;',cmt:'<p>L\x27objet OsControl permet de controler le syst\xE8m d\x27exploitation sur lequel tourne un VirtualHub. OsControl n\x27est disponible que dans le VirtualHub software. Attention, cette fonctionnalit\xE9 doit \xEAtre explicitement activ\xE9 au lancement du VirtualHub, avec l\x27option -o.</p>'}};
+doc['OsControl']['FindOsControl']={syn:'Permet de retrouver un contr\xF4le d\x27OS d\x27apr\xE8s un identifiant donn\xE9.',lib:'YOsControl.FindOsControl()',pro:'function FindOsControl(<span id=pn>func</span>, <span id=pn>obj_yapi</span>, <span id=pn>YAPI</span>)',cmt:'<p>Permet de retrouver un contr\xF4le d\x27OS d\x27apr\xE8s un identifiant donn\xE9. L\x27identifiant peut \xEAtre sp\xE9cifi\xE9 sous plusieurs formes:<br> <ul> <li>NomLogiqueFonction</li> <li>NoSerieModule.IdentifiantFonction</li> <li>NoSerieModule.NomLogiqueFonction</li> <li>NomLogiqueModule.IdentifiantMat\xE9riel</li> <li>NomLogiqueModule.NomLogiqueFonction</li> </ul></p><p> Cette fonction n\x27exige pas que le contr\xF4le d\x27OS soit en ligne au moment ou elle est appel\xE9e, l\x27objet retourn\xE9 sera n\xE9anmoins valide. Utiliser la m\xE9thode <tt>YOsControl.isOnline()</tt> pour tester si le contr\xF4le d\x27OS est utilisable \xE0 un moment donn\xE9. En cas d\x27ambigu\xEFt\xE9 lorsqu\x27on fait une recherche par nom logique, aucune erreur ne sera notifi\xE9e: la premi\xE8re instance trouv\xE9e sera renvoy\xE9e. La recherche se fait d\x27abord par nom mat\xE9riel, puis par nom logique.</p>',par:{func:'une cha\xEEne de caract\xE8res qui r\xE9f\xE9rence le contr\xF4le d\x27OS sans ambigu\xEFt\xE9'},ret:'un objet de classe <tt>YOsControl</tt> qui permet ensuite de contr\xF4ler le contr\xF4le d\x27OS.'};
+doc['OsControl']['FirstOsControl']={syn:'Commence l\x27\xE9num\xE9ration des contr\xF4le d\x27OS accessibles par la librairie.',lib:'YOsControl.FirstOsControl()',pro:'function FirstOsControl(<span id=pn>obj_yapi</span>, <span id=pn>YAPI</span>)',cmt:'<p>Commence l\x27\xE9num\xE9ration des contr\xF4le d\x27OS accessibles par la librairie. Utiliser la fonction <tt>YOsControl.nextOsControl()</tt> pour it\xE9rer sur les autres contr\xF4le d\x27OS.</p>',ret:'un pointeur sur un objet <tt>YOsControl</tt>, correspondant au premier contr\xF4le d\x27OS accessible en ligne, ou <tt>null</tt> si il n\x27y a pas de contr\xF4le d\x27OS disponibles.'};
+doc['OsControl']['clearCache']={syn:'Invalide le cache.',lib:'oscontrol.clearCache()',pro:'function clearCache()',cmt:'<p>Invalide le cache. Invalide le cache des valeurs courantes du contr\xF4le d\x27OS. Force le prochain appel \xE0 une m\xE9thode get_xxx() ou loadxxx() pour charger les les donn\xE9es depuis le module.</p>'};
+doc['OsControl']['describe']={syn:'Retourne un court texte d\xE9crivant de mani\xE8re non-ambig\xFCe l\x27instance du contr\xF4le d\x27OS au format <tt>TYPE(NAME)=SERIAL&#46;FUNCTIONID</tt>.',lib:'oscontrol.describe()',pro:'function describe()',cmt:'<p>Retourne un court texte d\xE9crivant de mani\xE8re non-ambig\xFCe l\x27instance du contr\xF4le d\x27OS au format <tt>TYPE(NAME)=SERIAL&#46;FUNCTIONID</tt>. Plus pr\xE9cis\xE9ment, <tt>TYPE</tt> correspond au type de fonction, <tt>NAME</tt> correspond au nom utils\xE9 lors du premier acc\xE8s a la fonction, <tt>SERIAL</tt> correspond au num\xE9ro de s\xE9rie du module si le module est connect\xE9, ou <tt>\x22unresolved\x22</tt> sinon, et <tt>FUNCTIONID</tt> correspond \xE0 l\x27identifiant mat\xE9riel de la fonction si le module est connect\xE9. Par exemple, La methode va retourner <tt>Relay(MyCustomName.relay1)=RELAYLO1-123456.relay1</tt> si le module est d\xE9j\xE0 connect\xE9 ou <tt>Relay(BadCustomeName.relay1)=unresolved</tt> si le module n\x27est pas d\xE9j\xE0 connect\xE9. Cette methode ne declenche aucune transaction USB ou TCP et peut donc \xEAtre utilis\xE9 dans un debuggeur.</p>',ret:'une cha\xEEne de caract\xE8res d\xE9crivant le contr\xF4le d\x27OS (ex: <tt>Relay(MyCustomName.relay1)=RELAYLO1-123456.relay1</tt>)'};
+doc['OsControl']['get_advertisedValue']={syn:'Retourne la valeur courante du contr\xF4le d\x27OS (pas plus de 6 caract\xE8res).',lib:'oscontrol.get_advertisedValue()',pro:'function get_advertisedValue()',cmt:'<p>Retourne la valeur courante du contr\xF4le d\x27OS (pas plus de 6 caract\xE8res).</p>',ret:'une cha\xEEne de caract\xE8res repr\xE9sentant la valeur courante du contr\xF4le d\x27OS (pas plus de 6 caract\xE8res).',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne <tt>Y_ADVERTISEDVALUE_INVALID</tt>.'};
+doc['OsControl']['get_errorMessage']={syn:'Retourne le message correspondant \xE0 la derni\xE8re erreur survenue lors de l\x27utilisation du contr\xF4le d\x27OS.',lib:'oscontrol.get_errorMessage()',pro:'function get_errorMessage()',cmt:'<p>Retourne le message correspondant \xE0 la derni\xE8re erreur survenue lors de l\x27utilisation du contr\xF4le d\x27OS. Cette m\xE9thode est principalement utile lorsque la librairie Yoctopuce est utilis\xE9e en d\xE9sactivant la gestion des exceptions.</p>',ret:'une cha\xEEne de caract\xE8res correspondant au message de la derni\xE8re erreur qui s\x27est produit lors de l\x27utilisation du contr\xF4le d\x27OS.'};
+doc['OsControl']['get_errorType']={syn:'Retourne le code d\x27erreur correspondant \xE0 la derni\xE8re erreur survenue lors de l\x27utilisation du contr\xF4le d\x27OS.',lib:'oscontrol.get_errorType()',pro:'function get_errorType()',cmt:'<p>Retourne le code d\x27erreur correspondant \xE0 la derni\xE8re erreur survenue lors de l\x27utilisation du contr\xF4le d\x27OS. Cette m\xE9thode est principalement utile lorsque la librairie Yoctopuce est utilis\xE9e en d\xE9sactivant la gestion des exceptions.</p>',ret:'un nombre correspondant au code de la derni\xE8re erreur qui s\x27est produit lors de l\x27utilisation du contr\xF4le d\x27OS.'};
+doc['OsControl']['get_friendlyName']={syn:'Retourne un identifiant global du contr\xF4le d\x27OS au format <tt>NOM_MODULE&#46;NOM_FONCTION</tt>.',lib:'oscontrol.get_friendlyName()',pro:'function get_friendlyName()',cmt:'<p>Retourne un identifiant global du contr\xF4le d\x27OS au format <tt>NOM_MODULE&#46;NOM_FONCTION</tt>. Le cha\xEEne retourn\xE9e utilise soit les noms logiques du module et du contr\xF4le d\x27OS si ils sont d\xE9finis, soit respectivement le num\xE9ro de s\xE9rie du module et l\x27identifant mat\xE9riel du contr\xF4le d\x27OS (par exemple: <tt>MyCustomName.relay1</tt>)</p>',ret:'une cha\xEEne de caract\xE8res identifiant le contr\xF4le d\x27OS en utilisant les noms logiques (ex: <tt>MyCustomName.relay1</tt>)',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne <tt>Y_FRIENDLYNAME_INVALID</tt>.'};
+doc['OsControl']['get_functionDescriptor']={syn:'Retourne un identifiant unique de type <tt>YFUN_DESCR</tt> correspondant \xE0 la fonction.',lib:'oscontrol.get_functionDescriptor()',pro:'function get_functionDescriptor()',cmt:'<p>Retourne un identifiant unique de type <tt>YFUN_DESCR</tt> correspondant \xE0 la fonction. Cet identifiant peut \xEAtre utilis\xE9 pour tester si deux instance de <tt>YFunction</tt> r\xE9f\xE9rencent physiquement la m\xEAme fonction sur le m\xEAme module.</p>',ret:'un identifiant de type <tt>YFUN_DESCR</tt>.',ext:'Si la fonction n\x27a jamais \xE9t\xE9 contact\xE9e, la valeur retourn\xE9e sera <tt>Y_FUNCTIONDESCRIPTOR_INVALID</tt>'};
+doc['OsControl']['get_functionId']={syn:'Retourne l\x27identifiant mat\xE9riel du contr\xF4le d\x27OS, sans r\xE9f\xE9rence au module.',lib:'oscontrol.get_functionId()',pro:'function get_functionId()',cmt:'<p>Retourne l\x27identifiant mat\xE9riel du contr\xF4le d\x27OS, sans r\xE9f\xE9rence au module. Par example <tt>relay1</tt>.</p>',ret:'une cha\xEEne de caract\xE8res identifiant le contr\xF4le d\x27OS (ex: <tt>relay1</tt>)',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne <tt>Y_FUNCTIONID_INVALID</tt>.'};
+doc['OsControl']['get_hardwareId']={syn:'Retourne l\x27identifiant mat\xE9riel unique du contr\xF4le d\x27OS au format <tt>SERIAL.FUNCTIONID</tt>.',lib:'oscontrol.get_hardwareId()',pro:'function get_hardwareId()',cmt:'<p>Retourne l\x27identifiant mat\xE9riel unique du contr\xF4le d\x27OS au format <tt>SERIAL.FUNCTIONID</tt>. L\x27identifiant unique est compos\xE9 du num\xE9ro de s\xE9rie du module et de l\x27identifiant mat\xE9riel du contr\xF4le d\x27OS (par example <tt>RELAYLO1-123456.relay1</tt>).</p>',ret:'une cha\xEEne de caract\xE8res identifiant le contr\xF4le d\x27OS (ex: <tt>RELAYLO1-123456.relay1</tt>)',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne <tt>Y_HARDWAREID_INVALID</tt>.'};
+doc['OsControl']['get_logicalName']={syn:'Retourne le nom logique du contr\xF4le d\x27OS.',lib:'oscontrol.get_logicalName()',pro:'function get_logicalName()',cmt:'<p>Retourne le nom logique du contr\xF4le d\x27OS.</p>',ret:'une cha\xEEne de caract\xE8res repr\xE9sentant le nom logique du contr\xF4le d\x27OS.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne <tt>Y_LOGICALNAME_INVALID</tt>.'};
+doc['OsControl']['get_module']={syn:'Retourne l\x27objet <tt>YModule</tt> correspondant au module Yoctopuce qui h\xE9berge la fonction.',lib:'oscontrol.get_module()',pro:'function get_module()',cmt:'<p>Retourne l\x27objet <tt>YModule</tt> correspondant au module Yoctopuce qui h\xE9berge la fonction. Si la fonction ne peut \xEAtre trouv\xE9e sur aucun module, l\x27instance de <tt>YModule</tt> retourn\xE9e ne sera pas joignable.</p>',ret:'une instance de <tt>YModule</tt>'};
+doc['OsControl']['get_shutdownCountdown']={syn:'Retourne le nombre de secondes restantes avant un arr\xEAt de l\x27OS, ou z\xE9ro si aucun arr\xEAt n\x27a \xE9t\xE9 agend\xE9.',lib:'oscontrol.get_shutdownCountdown()',pro:'function get_shutdownCountdown()',cmt:'<p>Retourne le nombre de secondes restantes avant un arr\xEAt de l\x27OS, ou z\xE9ro si aucun arr\xEAt n\x27a \xE9t\xE9 agend\xE9.</p>',ret:'un entier repr&eacute;sentant le nombre de secondes restantes avant un arr\xEAt de l\x27OS, ou z\xE9ro si aucun arr\xEAt n\x27a \xE9t\xE9 agend\xE9',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_SHUTDOWNCOUNTDOWN_INVALID</tt>.'};
+doc['OsControl']['get_userData']={syn:'Retourne le contenu de l\x27attribut userData, pr\xE9c\xE9demment stock\xE9 \xE0 l\x27aide de la m\xE9thode <tt>set_userData</tt>.',lib:'oscontrol.get_userData()',pro:'function get_userData()',cmt:'<p>Retourne le contenu de l\x27attribut userData, pr\xE9c\xE9demment stock\xE9 \xE0 l\x27aide de la m\xE9thode <tt>set_userData</tt>. Cet attribut n\x27es pas utilis\xE9 directement par l\x27API. Il est \xE0 la disposition de l\x27appelant pour stocker un contexte.</p>',ret:'l\x27objet stock\xE9 pr\xE9c\xE9demment par l\x27appelant.'};
+doc['OsControl']['isOnline']={syn:'V\xE9rifie si le module h\xE9bergeant le contr\xF4le d\x27OS est joignable, sans d\xE9clencher d\x27erreur.',lib:'oscontrol.isOnline()',pro:'function isOnline()',cmt:'<p>V\xE9rifie si le module h\xE9bergeant le contr\xF4le d\x27OS est joignable, sans d\xE9clencher d\x27erreur. Si les valeurs des attributs en cache du contr\xF4le d\x27OS sont valides au moment de l\x27appel, le module est consid\xE9r\xE9 joignable. Cette fonction ne cause en aucun cas d\x27exception, quelle que soit l\x27erreur qui pourrait se produire lors de la v\xE9rification de joignabilit\xE9.</p>',ret:'<tt>true</tt> si le contr\xF4le d\x27OS est joignable, <tt>false</tt> sinon'};
+doc['OsControl']['load']={syn:'Met en cache les valeurs courantes du contr\xF4le d\x27OS, avec une dur\xE9e de validit\xE9 sp\xE9cifi\xE9e.',lib:'oscontrol.load()',pro:'function load(<span id=pn>msValidity</span>)',cmt:'<p>Met en cache les valeurs courantes du contr\xF4le d\x27OS, avec une dur\xE9e de validit\xE9 sp\xE9cifi\xE9e. Par d\xE9faut, lorsqu\x27on acc\xE8de \xE0 un module, tous les attributs des fonctions du module sont automatiquement mises en cache pour la dur\xE9e standard (5 ms). Cette m\xE9thode peut \xEAtre utilis\xE9e pour marquer occasionellement les donn\xE9es cach\xE9es comme valides pour une plus longue p\xE9riode, par exemple dans le but de r\xE9duire le trafic r\xE9seau.</p>',par:{msValidity:'un entier correspondant \xE0 la dur\xE9e de validit\xE9 attribu\xE9e aux les param\xE8tres charg\xE9s, en millisecondes'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['OsControl']['muteValueCallbacks']={syn:'D\xE9sactive l\x27envoi de chaque changement de la valeur publi\xE9e au hub parent.',lib:'oscontrol.muteValueCallbacks()',pro:'function muteValueCallbacks()',cmt:'<p>D\xE9sactive l\x27envoi de chaque changement de la valeur publi\xE9e au hub parent. Vous pouvez utiliser cette fonction pour \xE9conomiser la bande passante et le CPU sur les machines de faible puissance, ou pour \xE9viter le d\xE9clanchement de callbacks HTTP. N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> du module si le r\xE9glage doit \xEAtre pr\xE9serv\xE9.</p>',ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['OsControl']['nextOsControl']={syn:'Continue l\x27\xE9num\xE9ration des contr\xF4le d\x27OS commenc\xE9e \xE0 l\x27aide de <tt>yFirstOsControl()</tt>.',lib:'oscontrol.nextOsControl()',pro:'function nextOsControl()',cmt:'<p>Continue l\x27\xE9num\xE9ration des contr\xF4le d\x27OS commenc\xE9e \xE0 l\x27aide de <tt>yFirstOsControl()</tt>.</p>',ret:'un pointeur sur un objet <tt>YOsControl</tt> accessible en ligne, ou <tt>null</tt> lorsque l\x27\xE9num\xE9ration est termin\xE9e.'};
+doc['OsControl']['registerValueCallback']={syn:'Enregistre la fonction de callback qui est appel\xE9e \xE0 chaque changement de la valeur publi\xE9e.',lib:'oscontrol.registerValueCallback()',pro:'function registerValueCallback(<span id=pn>callback</span>)',cmt:'<p>Enregistre la fonction de callback qui est appel\xE9e \xE0 chaque changement de la valeur publi\xE9e. Ce callback n\x27est appel\xE9 que durant l\x27ex\xE9cution de <tt>ySleep</tt> ou <tt>yHandleEvents</tt>. Cela permet \xE0 l\x27appelant de contr\xF4ler quand les callback peuvent se produire. Il est important d\x27appeler l\x27une de ces deux fonctions p\xE9riodiquement pour garantir que les callback ne soient pas appel\xE9s trop tard. Pour d\xE9sactiver un callback, il suffit d\x27appeler cette m\xE9thode en lui passant un pointeur nul.</p>',par:{callback:'la fonction de callback \xE0 rappeler, ou un pointeur nul. La fonction de callback doit accepter deux arguments: l\x27object fonction dont la valeur a chang\xE9, et la cha\xEEne de caract\xE8re d\xE9crivant la nouvelle valeur publi\xE9e.'}};
+doc['OsControl']['set_logicalName']={syn:'Modifie le nom logique du contr\xF4le d\x27OS.',lib:'oscontrol.set_logicalName()',pro:'function set_logicalName(<span id=pn>newval</span>)',cmt:'<p>Modifie le nom logique du contr\xF4le d\x27OS. Vous pouvez utiliser <tt>yCheckLogicalName()</tt> pour v\xE9rifier si votre param\xE8tre est valide. N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> du module si le r\xE9glage doit \xEAtre pr\xE9serv\xE9.</p>',par:{newval:'une cha\xEEne de caract\xE8res repr\xE9sentant le nom logique du contr\xF4le d\x27OS.'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27appel se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['OsControl']['set_userData']={syn:'Enregistre un contexte libre dans l\x27attribut userData de la fonction, afin de le retrouver plus tard \xE0 l\x27aide de la m\xE9thode <tt>get_userData</tt>.',lib:'oscontrol.set_userData()',pro:'function set_userData(<span id=pn>data</span>)',cmt:'<p>Enregistre un contexte libre dans l\x27attribut userData de la fonction, afin de le retrouver plus tard \xE0 l\x27aide de la m\xE9thode <tt>get_userData</tt>. Cet attribut n\x27es pas utilis\xE9 directement par l\x27API. Il est \xE0 la disposition de l\x27appelant pour stocker un contexte.</p>',par:{data:'objet quelconque \xE0 m\xE9moriser'}};
+doc['OsControl']['shutdown']={syn:'Agende un arr\xEAt de l\x27OS dans un nombre donn\xE9 de secondes.',lib:'oscontrol.shutdown()',pro:'function shutdown(<span id=pn>secBeforeShutDown</span>)',cmt:'<p>Agende un arr\xEAt de l\x27OS dans un nombre donn\xE9 de secondes.</p>',par:{secBeforeShutDown:'nombre de secondes avant l\x27arr\xEAt'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['OsControl']['unmuteValueCallbacks']={syn:'R\xE9active l\x27envoi de chaque changement de la valeur publi\xE9e au hub parent.',lib:'oscontrol.unmuteValueCallbacks()',pro:'function unmuteValueCallbacks()',cmt:'<p>R\xE9active l\x27envoi de chaque changement de la valeur publi\xE9e au hub parent. Cette fonction annule un pr\xE9c\xE9dent appel \xE0 <tt>muteValueCallbacks()</tt>. N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> du module si le r\xE9glage doit \xEAtre pr\xE9serv\xE9.</p>',ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+//--- (end of generated code: OsControl)
+//--- (generated code: Network)
+doc['Network']={'':{syn:'Interface de la fonction Network',inc:'import YNetwork from &#039;lib/network&#039;',cmt:'<p>Les objets YNetwork permettent de contr\xF4ler les param\xE8tres TCP/IP des modules Yoctopuce dot\xE9s d\x27une interface r\xE9seau.</p>'}};
+doc['Network']['FindNetwork']={syn:'Permet de retrouver une interface r\xE9seau d\x27apr\xE8s un identifiant donn\xE9.',lib:'YNetwork.FindNetwork()',pro:'function FindNetwork(<span id=pn>func</span>, <span id=pn>obj_yapi</span>, <span id=pn>YAPI</span>)',cmt:'<p>Permet de retrouver une interface r\xE9seau d\x27apr\xE8s un identifiant donn\xE9. L\x27identifiant peut \xEAtre sp\xE9cifi\xE9 sous plusieurs formes:<br> <ul> <li>NomLogiqueFonction</li> <li>NoSerieModule.IdentifiantFonction</li> <li>NoSerieModule.NomLogiqueFonction</li> <li>NomLogiqueModule.IdentifiantMat\xE9riel</li> <li>NomLogiqueModule.NomLogiqueFonction</li> </ul></p><p> Cette fonction n\x27exige pas que l\x27interface r\xE9seau soit en ligne au moment ou elle est appel\xE9e, l\x27objet retourn\xE9 sera n\xE9anmoins valide. Utiliser la m\xE9thode <tt>YNetwork.isOnline()</tt> pour tester si l\x27interface r\xE9seau est utilisable \xE0 un moment donn\xE9. En cas d\x27ambigu\xEFt\xE9 lorsqu\x27on fait une recherche par nom logique, aucune erreur ne sera notifi\xE9e: la premi\xE8re instance trouv\xE9e sera renvoy\xE9e. La recherche se fait d\x27abord par nom mat\xE9riel, puis par nom logique.</p>',par:{func:'une cha\xEEne de caract\xE8res qui r\xE9f\xE9rence l\x27interface r\xE9seau sans ambigu\xEFt\xE9'},ret:'un objet de classe <tt>YNetwork</tt> qui permet ensuite de contr\xF4ler l\x27interface r\xE9seau.'};
+doc['Network']['FirstNetwork']={syn:'Commence l\x27\xE9num\xE9ration des interfaces r\xE9seau accessibles par la librairie.',lib:'YNetwork.FirstNetwork()',pro:'function FirstNetwork(<span id=pn>obj_yapi</span>, <span id=pn>YAPI</span>)',cmt:'<p>Commence l\x27\xE9num\xE9ration des interfaces r\xE9seau accessibles par la librairie. Utiliser la fonction <tt>YNetwork.nextNetwork()</tt> pour it\xE9rer sur les autres interfaces r\xE9seau.</p>',ret:'un pointeur sur un objet <tt>YNetwork</tt>, correspondant \xE0 la premi\xE8re interface r\xE9seau accessible en ligne, ou <tt>null</tt> si il n\x27y a pas de interfaces r\xE9seau disponibles.'};
+doc['Network']['callbackLogin']={syn:'Contacte le callback de notification et sauvegarde un laisser-passer pour s\x27y connecter.',lib:'network.callbackLogin()',pro:'function callbackLogin(<span id=pn>username</span>, <span id=pn>password</span>)',cmt:'<p>Contacte le callback de notification et sauvegarde un laisser-passer pour s\x27y connecter. Le mot de passe ne sera pas stock\xE9 dans le module, mais seulement une version hash\xE9e non r\xE9versible. N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> du module si le r\xE9glage doit \xEAtre pr\xE9serv\xE9.</p>',par:{username:'nom d\x27utilisateur pour s\x27identifier au callback',password:'mot de passe pour s\x27identifier au callback'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op&eacute;ration se d&eacute;roule sans erreur.',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne un code d\x27erreur n&eacute;gatif.'};
+doc['Network']['clearCache']={syn:'Invalide le cache.',lib:'network.clearCache()',pro:'function clearCache()',cmt:'<p>Invalide le cache. Invalide le cache des valeurs courantes de l\x27interface r\xE9seau. Force le prochain appel \xE0 une m\xE9thode get_xxx() ou loadxxx() pour charger les les donn\xE9es depuis le module.</p>'};
+doc['Network']['describe']={syn:'Retourne un court texte d\xE9crivant de mani\xE8re non-ambig\xFCe l\x27instance de l\x27interface r\xE9seau au format <tt>TYPE(NAME)=SERIAL&#46;FUNCTIONID</tt>.',lib:'network.describe()',pro:'function describe()',cmt:'<p>Retourne un court texte d\xE9crivant de mani\xE8re non-ambig\xFCe l\x27instance de l\x27interface r\xE9seau au format <tt>TYPE(NAME)=SERIAL&#46;FUNCTIONID</tt>. Plus pr\xE9cis\xE9ment, <tt>TYPE</tt> correspond au type de fonction, <tt>NAME</tt> correspond au nom utils\xE9 lors du premier acc\xE8s a la fonction, <tt>SERIAL</tt> correspond au num\xE9ro de s\xE9rie du module si le module est connect\xE9, ou <tt>\x22unresolved\x22</tt> sinon, et <tt>FUNCTIONID</tt> correspond \xE0 l\x27identifiant mat\xE9riel de la fonction si le module est connect\xE9. Par exemple, La methode va retourner <tt>Relay(MyCustomName.relay1)=RELAYLO1-123456.relay1</tt> si le module est d\xE9j\xE0 connect\xE9 ou <tt>Relay(BadCustomeName.relay1)=unresolved</tt> si le module n\x27est pas d\xE9j\xE0 connect\xE9. Cette methode ne declenche aucune transaction USB ou TCP et peut donc \xEAtre utilis\xE9 dans un debuggeur.</p>',ret:'une cha\xEEne de caract\xE8res d\xE9crivant l\x27interface r\xE9seau (ex: <tt>Relay(MyCustomName.relay1)=RELAYLO1-123456.relay1</tt>)'};
+doc['Network']['get_adminPassword']={syn:'Retourne une cha\xEEne de hash si un mot de passe a \xE9t\xE9 configur\xE9 pour l\x27utilisateur \x22admin\x22, ou sinon une cha\xEEne vide.',lib:'network.get_adminPassword()',pro:'function get_adminPassword()',cmt:'<p>Retourne une cha\xEEne de hash si un mot de passe a \xE9t\xE9 configur\xE9 pour l\x27utilisateur \x22admin\x22, ou sinon une cha\xEEne vide.</p>',ret:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant une cha\xEEne de hash si un mot de passe a \xE9t\xE9 configur\xE9 pour l\x27utilisateur \x22admin\x22, ou sinon une cha\xEEne vide',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_ADMINPASSWORD_INVALID</tt>.'};
+doc['Network']['get_advertisedValue']={syn:'Retourne la valeur courante de l\x27interface r\xE9seau (pas plus de 6 caract\xE8res).',lib:'network.get_advertisedValue()',pro:'function get_advertisedValue()',cmt:'<p>Retourne la valeur courante de l\x27interface r\xE9seau (pas plus de 6 caract\xE8res).</p>',ret:'une cha\xEEne de caract\xE8res repr\xE9sentant la valeur courante de l\x27interface r\xE9seau (pas plus de 6 caract\xE8res).',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne <tt>Y_ADVERTISEDVALUE_INVALID</tt>.'};
+doc['Network']['get_callbackCredentials']={syn:'Retourne une version hash\xE9e du laisser-passer pour le callback de notification s\x27il a \xE9t\xE9 configur\xE9, ou sinon une cha\xEEne vide.',lib:'network.get_callbackCredentials()',pro:'function get_callbackCredentials()',cmt:'<p>Retourne une version hash\xE9e du laisser-passer pour le callback de notification s\x27il a \xE9t\xE9 configur\xE9, ou sinon une cha\xEEne vide.</p>',ret:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant une version hash\xE9e du laisser-passer pour le callback de notification s\x27il a \xE9t\xE9 configur\xE9, ou sinon une cha\xEEne vide',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_CALLBACKCREDENTIALS_INVALID</tt>.'};
+doc['Network']['get_callbackEncoding']={syn:'Retourne l\x27encodage \xE0 utiliser pour repr\xE9senter les valeurs notifi\xE9es par callback.',lib:'network.get_callbackEncoding()',pro:'function get_callbackEncoding()',cmt:'<p>Retourne l\x27encodage \xE0 utiliser pour repr\xE9senter les valeurs notifi\xE9es par callback.</p>',ret:'une valeur parmi <tt>Y_CALLBACKENCODING_FORM</tt>, <tt>Y_CALLBACKENCODING_JSON</tt>, <tt>Y_CALLBACKENCODING_JSON_ARRAY</tt>, <tt>Y_CALLBACKENCODING_CSV</tt>, <tt>Y_CALLBACKENCODING_YOCTO_API</tt>, <tt>Y_CALLBACKENCODING_JSON_NUM</tt>, <tt>Y_CALLBACKENCODING_EMONCMS</tt>, <tt>Y_CALLBACKENCODING_AZURE</tt> et <tt>Y_CALLBACKENCODING_INFLUXDB</tt> repr&eacute;sentant l\x27encodage \xE0 utiliser pour repr\xE9senter les valeurs notifi\xE9es par callback',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_CALLBACKENCODING_INVALID</tt>.'};
+doc['Network']['get_callbackMaxDelay']={syn:'Retourne l\x27attente maximale entre deux notifications par callback, en secondes.',lib:'network.get_callbackMaxDelay()',pro:'function get_callbackMaxDelay()',cmt:'<p>Retourne l\x27attente maximale entre deux notifications par callback, en secondes.</p>',ret:'un entier repr&eacute;sentant l\x27attente maximale entre deux notifications par callback, en secondes',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_CALLBACKMAXDELAY_INVALID</tt>.'};
+doc['Network']['get_callbackMethod']={syn:'Retourne la m\xE9thode HTTP \xE0 utiliser pour signaler les changements d\x27\xE9tat par callback.',lib:'network.get_callbackMethod()',pro:'function get_callbackMethod()',cmt:'<p>Retourne la m\xE9thode HTTP \xE0 utiliser pour signaler les changements d\x27\xE9tat par callback.</p>',ret:'une valeur parmi <tt>Y_CALLBACKMETHOD_POST</tt>, <tt>Y_CALLBACKMETHOD_GET</tt> et <tt>Y_CALLBACKMETHOD_PUT</tt> repr&eacute;sentant la m\xE9thode HTTP \xE0 utiliser pour signaler les changements d\x27\xE9tat par callback',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_CALLBACKMETHOD_INVALID</tt>.'};
+doc['Network']['get_callbackMinDelay']={syn:'Retourne l\x27attente minimale entre deux notifications par callback, en secondes.',lib:'network.get_callbackMinDelay()',pro:'function get_callbackMinDelay()',cmt:'<p>Retourne l\x27attente minimale entre deux notifications par callback, en secondes.</p>',ret:'un entier repr&eacute;sentant l\x27attente minimale entre deux notifications par callback, en secondes',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_CALLBACKMINDELAY_INVALID</tt>.'};
+doc['Network']['get_callbackUrl']={syn:'Retourne l\x27adresse (URL) de callback \xE0 notifier lors de changement d\x27\xE9tat significatifs.',lib:'network.get_callbackUrl()',pro:'function get_callbackUrl()',cmt:'<p>Retourne l\x27adresse (URL) de callback \xE0 notifier lors de changement d\x27\xE9tat significatifs.</p>',ret:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant l\x27adresse (URL) de callback \xE0 notifier lors de changement d\x27\xE9tat significatifs',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_CALLBACKURL_INVALID</tt>.'};
+doc['Network']['get_defaultPage']={syn:'Retourne la page HTML \xE0 envoyer pour l\x27URL \x22/\x22 ',lib:'network.get_defaultPage()',pro:'function get_defaultPage()',cmt:'<p>Retourne la page HTML \xE0 envoyer pour l\x27URL \x22/\x22</p>',ret:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant la page HTML \xE0 envoyer pour l\x27URL \x22/\x22',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_DEFAULTPAGE_INVALID</tt>.'};
+doc['Network']['get_discoverable']={syn:'Retourne l\x27\xE9tat d\x27activation du protocole d\x27annonce sur le r\xE9seau permettant de retrouver facilement le module (protocols uPnP/Bonjour).',lib:'network.get_discoverable()',pro:'function get_discoverable()',cmt:'<p>Retourne l\x27\xE9tat d\x27activation du protocole d\x27annonce sur le r\xE9seau permettant de retrouver facilement le module (protocols uPnP/Bonjour).</p>',ret:'soit <tt>Y_DISCOVERABLE_FALSE</tt>, soit <tt>Y_DISCOVERABLE_TRUE</tt>, selon l\x27\xE9tat d\x27activation du protocole d\x27annonce sur le r\xE9seau permettant de retrouver facilement le module (protocols uPnP/Bonjour)',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_DISCOVERABLE_INVALID</tt>.'};
+doc['Network']['get_errorMessage']={syn:'Retourne le message correspondant \xE0 la derni\xE8re erreur survenue lors de l\x27utilisation de l\x27interface r\xE9seau.',lib:'network.get_errorMessage()',pro:'function get_errorMessage()',cmt:'<p>Retourne le message correspondant \xE0 la derni\xE8re erreur survenue lors de l\x27utilisation de l\x27interface r\xE9seau. Cette m\xE9thode est principalement utile lorsque la librairie Yoctopuce est utilis\xE9e en d\xE9sactivant la gestion des exceptions.</p>',ret:'une cha\xEEne de caract\xE8res correspondant au message de la derni\xE8re erreur qui s\x27est produit lors de l\x27utilisation de l\x27interface r\xE9seau.'};
+doc['Network']['get_errorType']={syn:'Retourne le code d\x27erreur correspondant \xE0 la derni\xE8re erreur survenue lors de l\x27utilisation de l\x27interface r\xE9seau.',lib:'network.get_errorType()',pro:'function get_errorType()',cmt:'<p>Retourne le code d\x27erreur correspondant \xE0 la derni\xE8re erreur survenue lors de l\x27utilisation de l\x27interface r\xE9seau. Cette m\xE9thode est principalement utile lorsque la librairie Yoctopuce est utilis\xE9e en d\xE9sactivant la gestion des exceptions.</p>',ret:'un nombre correspondant au code de la derni\xE8re erreur qui s\x27est produit lors de l\x27utilisation de l\x27interface r\xE9seau.'};
+doc['Network']['get_friendlyName']={syn:'Retourne un identifiant global de l\x27interface r\xE9seau au format <tt>NOM_MODULE&#46;NOM_FONCTION</tt>.',lib:'network.get_friendlyName()',pro:'function get_friendlyName()',cmt:'<p>Retourne un identifiant global de l\x27interface r\xE9seau au format <tt>NOM_MODULE&#46;NOM_FONCTION</tt>. Le cha\xEEne retourn\xE9e utilise soit les noms logiques du module et de l\x27interface r\xE9seau si ils sont d\xE9finis, soit respectivement le num\xE9ro de s\xE9rie du module et l\x27identifant mat\xE9riel de l\x27interface r\xE9seau (par exemple: <tt>MyCustomName.relay1</tt>)</p>',ret:'une cha\xEEne de caract\xE8res identifiant l\x27interface r\xE9seau en utilisant les noms logiques (ex: <tt>MyCustomName.relay1</tt>)',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne <tt>Y_FRIENDLYNAME_INVALID</tt>.'};
+doc['Network']['get_functionDescriptor']={syn:'Retourne un identifiant unique de type <tt>YFUN_DESCR</tt> correspondant \xE0 la fonction.',lib:'network.get_functionDescriptor()',pro:'function get_functionDescriptor()',cmt:'<p>Retourne un identifiant unique de type <tt>YFUN_DESCR</tt> correspondant \xE0 la fonction. Cet identifiant peut \xEAtre utilis\xE9 pour tester si deux instance de <tt>YFunction</tt> r\xE9f\xE9rencent physiquement la m\xEAme fonction sur le m\xEAme module.</p>',ret:'un identifiant de type <tt>YFUN_DESCR</tt>.',ext:'Si la fonction n\x27a jamais \xE9t\xE9 contact\xE9e, la valeur retourn\xE9e sera <tt>Y_FUNCTIONDESCRIPTOR_INVALID</tt>'};
+doc['Network']['get_functionId']={syn:'Retourne l\x27identifiant mat\xE9riel de l\x27interface r\xE9seau, sans r\xE9f\xE9rence au module.',lib:'network.get_functionId()',pro:'function get_functionId()',cmt:'<p>Retourne l\x27identifiant mat\xE9riel de l\x27interface r\xE9seau, sans r\xE9f\xE9rence au module. Par example <tt>relay1</tt>.</p>',ret:'une cha\xEEne de caract\xE8res identifiant l\x27interface r\xE9seau (ex: <tt>relay1</tt>)',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne <tt>Y_FUNCTIONID_INVALID</tt>.'};
+doc['Network']['get_hardwareId']={syn:'Retourne l\x27identifiant mat\xE9riel unique de l\x27interface r\xE9seau au format <tt>SERIAL.FUNCTIONID</tt>.',lib:'network.get_hardwareId()',pro:'function get_hardwareId()',cmt:'<p>Retourne l\x27identifiant mat\xE9riel unique de l\x27interface r\xE9seau au format <tt>SERIAL.FUNCTIONID</tt>. L\x27identifiant unique est compos\xE9 du num\xE9ro de s\xE9rie du module et de l\x27identifiant mat\xE9riel de l\x27interface r\xE9seau (par example <tt>RELAYLO1-123456.relay1</tt>).</p>',ret:'une cha\xEEne de caract\xE8res identifiant l\x27interface r\xE9seau (ex: <tt>RELAYLO1-123456.relay1</tt>)',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne <tt>Y_HARDWAREID_INVALID</tt>.'};
+doc['Network']['get_httpPort']={syn:'Retourne la page HTML \xE0 envoyer pour l\x27URL \x22/\x22 ',lib:'network.get_httpPort()',pro:'function get_httpPort()',cmt:'<p>Retourne la page HTML \xE0 envoyer pour l\x27URL \x22/\x22</p>',ret:'un entier repr&eacute;sentant la page HTML \xE0 envoyer pour l\x27URL \x22/\x22',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_HTTPPORT_INVALID</tt>.'};
+doc['Network']['get_ipAddress']={syn:'Retourne l\x27adresse IP utilis\xE9e par le module Yoctopuce.',lib:'network.get_ipAddress()',pro:'function get_ipAddress()',cmt:'<p>Retourne l\x27adresse IP utilis\xE9e par le module Yoctopuce. Il peut s\x27agir d\x27une adresse configur\xE9e statiquement, ou d\x27une adresse re\xE7ue par un serveur DHCP.</p>',ret:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant l\x27adresse IP utilis\xE9e par le module Yoctopuce',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_IPADDRESS_INVALID</tt>.'};
+doc['Network']['get_logicalName']={syn:'Retourne le nom logique de l\x27interface r\xE9seau.',lib:'network.get_logicalName()',pro:'function get_logicalName()',cmt:'<p>Retourne le nom logique de l\x27interface r\xE9seau.</p>',ret:'une cha\xEEne de caract\xE8res repr\xE9sentant le nom logique de l\x27interface r\xE9seau.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne <tt>Y_LOGICALNAME_INVALID</tt>.'};
+doc['Network']['get_macAddress']={syn:'Retourne l\x27adresse MAC de l\x27interface r\xE9seau, unique pour chaque module.',lib:'network.get_macAddress()',pro:'function get_macAddress()',cmt:'<p>Retourne l\x27adresse MAC de l\x27interface r\xE9seau, unique pour chaque module. L\x27adresse MAC est aussi pr\xE9sente sur un autocollant sur le module, repr\xE9sent\xE9e en chiffres et en code-barres.</p>',ret:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant l\x27adresse MAC de l\x27interface r\xE9seau, unique pour chaque module',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_MACADDRESS_INVALID</tt>.'};
+doc['Network']['get_module']={syn:'Retourne l\x27objet <tt>YModule</tt> correspondant au module Yoctopuce qui h\xE9berge la fonction.',lib:'network.get_module()',pro:'function get_module()',cmt:'<p>Retourne l\x27objet <tt>YModule</tt> correspondant au module Yoctopuce qui h\xE9berge la fonction. Si la fonction ne peut \xEAtre trouv\xE9e sur aucun module, l\x27instance de <tt>YModule</tt> retourn\xE9e ne sera pas joignable.</p>',ret:'une instance de <tt>YModule</tt>'};
+doc['Network']['get_ntpServer']={syn:'Retourne l\x27adresse IP du serveur de NTP \xE0 utiliser pour maintenir le module \xE0 l\x27heure.',lib:'network.get_ntpServer()',pro:'function get_ntpServer()',cmt:'<p>Retourne l\x27adresse IP du serveur de NTP \xE0 utiliser pour maintenir le module \xE0 l\x27heure.</p>',ret:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant l\x27adresse IP du serveur de NTP \xE0 utiliser pour maintenir le module \xE0 l\x27heure',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_NTPSERVER_INVALID</tt>.'};
+doc['Network']['get_poeCurrent']={syn:'Retourne le courant consomm\xE9 par le module depuis Power-over-Ethernet (PoE), en milliamp\xE8res.',lib:'network.get_poeCurrent()',pro:'function get_poeCurrent()',cmt:'<p>Retourne le courant consomm\xE9 par le module depuis Power-over-Ethernet (PoE), en milliamp\xE8res. La consommation est mesur\xE9e apr\xE8s conversion en 5 Volt, et ne doit jamais d\xE9passer 1800 mA.</p>',ret:'un entier repr&eacute;sentant le courant consomm\xE9 par le module depuis Power-over-Ethernet (PoE), en milliamp\xE8res',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_POECURRENT_INVALID</tt>.'};
+doc['Network']['get_primaryDNS']={syn:'Retourne l\x27adresse IP du serveur de noms primaire que le module doit utiliser.',lib:'network.get_primaryDNS()',pro:'function get_primaryDNS()',cmt:'<p>Retourne l\x27adresse IP du serveur de noms primaire que le module doit utiliser.</p>',ret:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant l\x27adresse IP du serveur de noms primaire que le module doit utiliser',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_PRIMARYDNS_INVALID</tt>.'};
+doc['Network']['get_readiness']={syn:'Retourne l\x27\xE9tat de fonctionnement atteint par l\x27interface r\xE9seau.',lib:'network.get_readiness()',pro:'function get_readiness()',cmt:'<p>Retourne l\x27\xE9tat de fonctionnement atteint par l\x27interface r\xE9seau. Le niveau z\xE9ro (DOWN_0) signifie qu\x27aucun support r\xE9seau mat\xE9riel n\x27a \xE9t\xE9 d\xE9tect\xE9. Soit il n\x27y a pas de signal sur le cable r\xE9seau, soit le point d\x27acc\xE8s sans fil choisi n\x27est pas d\xE9tect\xE9. Le niveau 1 (LIVE_1) est atteint lorsque le r\xE9seau est d\xE9tect\xE9, mais n\x27est pas encore connect\xE9. Pour un r\xE9seau sans fil, cela confirme la l\x27existence du SSID configur\xE9. Le niveau 2 (LINK_2) est atteint lorsque le support mat\xE9riel du r\xE9seau est fonctionnel. Pour une connection r\xE9seau filaire, le niveau 2 signifie que le cable est connect\xE9 aux deux bouts. Pour une connection \xE0 un point d\x27acc\xE8s r\xE9seau sans fil, il d\xE9montre que les param\xE8tres de s\xE9curit\xE9s configur\xE9s sont corrects. Pour une connection sans fil en mode ad-hoc, cela signifie qu\x27il y a au moins un partenaire sur le r\xE9seau ad-hoc. Le niveau 3 (DHCP_3) est atteint lorsque qu\x27une adresse IP a \xE9t\xE9 obtenue par DHCP. Le niveau 4 (DNS_4) est atteint lorsqu\x27un serveur DNS est joignable par le r\xE9seau. Le niveau 5 (WWW_5) est atteint lorsque la connectivit\xE9 globale \xE0 internet est av\xE9r\xE9e par l\x27obtention de l\x27heure courante sur une serveur NTP.</p>',ret:'une valeur parmi <tt>Y_READINESS_DOWN</tt>, <tt>Y_READINESS_EXISTS</tt>, <tt>Y_READINESS_LINKED</tt>, <tt>Y_READINESS_LAN_OK</tt> et <tt>Y_READINESS_WWW_OK</tt> repr&eacute;sentant l\x27\xE9tat de fonctionnement atteint par l\x27interface r\xE9seau',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_READINESS_INVALID</tt>.'};
+doc['Network']['get_router']={syn:'Retourne l\x27adresse IP du routeur (passerelle) utilis\xE9 par le module (<i>default gateway</i>).',lib:'network.get_router()',pro:'function get_router()',cmt:'<p>Retourne l\x27adresse IP du routeur (passerelle) utilis\xE9 par le module (<i>default gateway</i>).</p>',ret:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant l\x27adresse IP du routeur (passerelle) utilis\xE9 par le module (<i>default gateway</i>)',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_ROUTER_INVALID</tt>.'};
+doc['Network']['get_secondaryDNS']={syn:'Retourne l\x27adresse IP du serveur de noms secondaire que le module doit utiliser.',lib:'network.get_secondaryDNS()',pro:'function get_secondaryDNS()',cmt:'<p>Retourne l\x27adresse IP du serveur de noms secondaire que le module doit utiliser.</p>',ret:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant l\x27adresse IP du serveur de noms secondaire que le module doit utiliser',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_SECONDARYDNS_INVALID</tt>.'};
+doc['Network']['get_subnetMask']={syn:'Retourne le masque de sous-r\xE9seau utilis\xE9 par le module.',lib:'network.get_subnetMask()',pro:'function get_subnetMask()',cmt:'<p>Retourne le masque de sous-r\xE9seau utilis\xE9 par le module.</p>',ret:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant le masque de sous-r\xE9seau utilis\xE9 par le module',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_SUBNETMASK_INVALID</tt>.'};
+doc['Network']['get_userData']={syn:'Retourne le contenu de l\x27attribut userData, pr\xE9c\xE9demment stock\xE9 \xE0 l\x27aide de la m\xE9thode <tt>set_userData</tt>.',lib:'network.get_userData()',pro:'function get_userData()',cmt:'<p>Retourne le contenu de l\x27attribut userData, pr\xE9c\xE9demment stock\xE9 \xE0 l\x27aide de la m\xE9thode <tt>set_userData</tt>. Cet attribut n\x27es pas utilis\xE9 directement par l\x27API. Il est \xE0 la disposition de l\x27appelant pour stocker un contexte.</p>',ret:'l\x27objet stock\xE9 pr\xE9c\xE9demment par l\x27appelant.'};
+doc['Network']['get_userPassword']={syn:'Retourne une cha\xEEne de hash si un mot de passe a \xE9t\xE9 configur\xE9 pour l\x27utilisateur \x22user\x22, ou sinon une cha\xEEne vide.',lib:'network.get_userPassword()',pro:'function get_userPassword()',cmt:'<p>Retourne une cha\xEEne de hash si un mot de passe a \xE9t\xE9 configur\xE9 pour l\x27utilisateur \x22user\x22, ou sinon une cha\xEEne vide.</p>',ret:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant une cha\xEEne de hash si un mot de passe a \xE9t\xE9 configur\xE9 pour l\x27utilisateur \x22user\x22, ou sinon une cha\xEEne vide',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_USERPASSWORD_INVALID</tt>.'};
+doc['Network']['get_wwwWatchdogDelay']={syn:'Retourne la dur\xE9e de perte de connection WWW tol\xE9r\xE9e (en secondes) avant de d\xE9clancher un red\xE9marrage automatique pour tenter de r\xE9cup\xE9rer la connectivit\xE9 Internet.',lib:'network.get_wwwWatchdogDelay()',pro:'function get_wwwWatchdogDelay()',cmt:'<p>Retourne la dur\xE9e de perte de connection WWW tol\xE9r\xE9e (en secondes) avant de d\xE9clancher un red\xE9marrage automatique pour tenter de r\xE9cup\xE9rer la connectivit\xE9 Internet. Une valeur nulle d\xE9sactive le red\xE9marrage automatique en cas de perte de connectivit\xE9 WWW.</p>',ret:'un entier repr&eacute;sentant la dur\xE9e de perte de connection WWW tol\xE9r\xE9e (en secondes) avant de d\xE9clancher un red\xE9marrage automatique pour tenter de r\xE9cup\xE9rer la connectivit\xE9 Internet',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne <tt>Y_WWWWATCHDOGDELAY_INVALID</tt>.'};
+doc['Network']['isOnline']={syn:'V\xE9rifie si le module h\xE9bergeant l\x27interface r\xE9seau est joignable, sans d\xE9clencher d\x27erreur.',lib:'network.isOnline()',pro:'function isOnline()',cmt:'<p>V\xE9rifie si le module h\xE9bergeant l\x27interface r\xE9seau est joignable, sans d\xE9clencher d\x27erreur. Si les valeurs des attributs en cache de l\x27interface r\xE9seau sont valides au moment de l\x27appel, le module est consid\xE9r\xE9 joignable. Cette fonction ne cause en aucun cas d\x27exception, quelle que soit l\x27erreur qui pourrait se produire lors de la v\xE9rification de joignabilit\xE9.</p>',ret:'<tt>true</tt> si l\x27interface r\xE9seau est joignable, <tt>false</tt> sinon'};
+doc['Network']['load']={syn:'Met en cache les valeurs courantes de l\x27interface r\xE9seau, avec une dur\xE9e de validit\xE9 sp\xE9cifi\xE9e.',lib:'network.load()',pro:'function load(<span id=pn>msValidity</span>)',cmt:'<p>Met en cache les valeurs courantes de l\x27interface r\xE9seau, avec une dur\xE9e de validit\xE9 sp\xE9cifi\xE9e. Par d\xE9faut, lorsqu\x27on acc\xE8de \xE0 un module, tous les attributs des fonctions du module sont automatiquement mises en cache pour la dur\xE9e standard (5 ms). Cette m\xE9thode peut \xEAtre utilis\xE9e pour marquer occasionellement les donn\xE9es cach\xE9es comme valides pour une plus longue p\xE9riode, par exemple dans le but de r\xE9duire le trafic r\xE9seau.</p>',par:{msValidity:'un entier correspondant \xE0 la dur\xE9e de validit\xE9 attribu\xE9e aux les param\xE8tres charg\xE9s, en millisecondes'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['Network']['muteValueCallbacks']={syn:'D\xE9sactive l\x27envoi de chaque changement de la valeur publi\xE9e au hub parent.',lib:'network.muteValueCallbacks()',pro:'function muteValueCallbacks()',cmt:'<p>D\xE9sactive l\x27envoi de chaque changement de la valeur publi\xE9e au hub parent. Vous pouvez utiliser cette fonction pour \xE9conomiser la bande passante et le CPU sur les machines de faible puissance, ou pour \xE9viter le d\xE9clanchement de callbacks HTTP. N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> du module si le r\xE9glage doit \xEAtre pr\xE9serv\xE9.</p>',ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['Network']['nextNetwork']={syn:'Continue l\x27\xE9num\xE9ration des interfaces r\xE9seau commenc\xE9e \xE0 l\x27aide de <tt>yFirstNetwork()</tt>.',lib:'network.nextNetwork()',pro:'function nextNetwork()',cmt:'<p>Continue l\x27\xE9num\xE9ration des interfaces r\xE9seau commenc\xE9e \xE0 l\x27aide de <tt>yFirstNetwork()</tt>.</p>',ret:'un pointeur sur un objet <tt>YNetwork</tt> accessible en ligne, ou <tt>null</tt> lorsque l\x27\xE9num\xE9ration est termin\xE9e.'};
+doc['Network']['ping']={syn:'Ping str_host pour v\xE9rifier la connexion r\xE9seau.',lib:'network.ping()',pro:'function ping(<span id=pn>host</span>)',cmt:'<p>Ping str_host pour v\xE9rifier la connexion r\xE9seau. Envoie quatre requ\xEAtes ICMP ECHO_RESPONSER \xE0 la cible str_host depuis le module. Cette m\xE9thode retourne une cha\xEEne de caract\xE8res avec le r\xE9sultat des 4 requ\xEAtes ICMP ECHO_RESPONSE.</p>',par:{host:'le nom d\x27h\xF4te ou l\x27adresse IP de la cible'},ret:'une cha\xEEne de caract\xE8res contenant le r\xE9sultat du ping.'};
+doc['Network']['registerValueCallback']={syn:'Enregistre la fonction de callback qui est appel\xE9e \xE0 chaque changement de la valeur publi\xE9e.',lib:'network.registerValueCallback()',pro:'function registerValueCallback(<span id=pn>callback</span>)',cmt:'<p>Enregistre la fonction de callback qui est appel\xE9e \xE0 chaque changement de la valeur publi\xE9e. Ce callback n\x27est appel\xE9 que durant l\x27ex\xE9cution de <tt>ySleep</tt> ou <tt>yHandleEvents</tt>. Cela permet \xE0 l\x27appelant de contr\xF4ler quand les callback peuvent se produire. Il est important d\x27appeler l\x27une de ces deux fonctions p\xE9riodiquement pour garantir que les callback ne soient pas appel\xE9s trop tard. Pour d\xE9sactiver un callback, il suffit d\x27appeler cette m\xE9thode en lui passant un pointeur nul.</p>',par:{callback:'la fonction de callback \xE0 rappeler, ou un pointeur nul. La fonction de callback doit accepter deux arguments: l\x27object fonction dont la valeur a chang\xE9, et la cha\xEEne de caract\xE8re d\xE9crivant la nouvelle valeur publi\xE9e.'}};
+doc['Network']['set_adminPassword']={syn:'Modifie le mot de passe pour l\x27utilisateur \x22admin\x22, qui devient alors instantan\xE9ment n\xE9cessaire pour toute alt\xE9ration de l\x27\xE9tat du module.',lib:'network.set_adminPassword()',pro:'function set_adminPassword(<span id=pn>newval</span>)',cmt:'<p>Modifie le mot de passe pour l\x27utilisateur \x22admin\x22, qui devient alors instantan\xE9ment n\xE9cessaire pour toute alt\xE9ration de l\x27\xE9tat du module. Si la valeur fournie est une cha\xEEne vide, plus aucun mot de passe n\x27est n\xE9cessaire. N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> du module si le r\xE9glage doit \xEAtre pr\xE9serv\xE9.</p>',par:{newval:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant le mot de passe pour l\x27utilisateur \x22admin\x22, qui devient alors instantan\xE9ment n\xE9cessaire pour toute alt\xE9ration de l\x27\xE9tat du module'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op&eacute;ration se d&eacute;roule sans erreur.',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne un code d\x27erreur n&eacute;gatif.'};
+doc['Network']['set_callbackCredentials']={syn:'Modifie le laisser-passer pour se connecter \xE0 l\x27adresse de callback.',lib:'network.set_callbackCredentials()',pro:'function set_callbackCredentials(<span id=pn>newval</span>)',cmt:'<p>Modifie le laisser-passer pour se connecter \xE0 l\x27adresse de callback. Le laisser-passer doit \xEAtre fourni tel que retourn\xE9 par la fonction <tt>get_callbackCredentials</tt>, sous la forme <tt>username:hash</tt>. La valeur du hash d\xE9pend de la m\xE9thode d\x27autorisation impl\xE9ment\xE9e par le callback. Pour une autorisation de type Basic, le hash est le MD5 de la cha\xEEne <tt>username:password</tt>. Pour une autorisation de type Digest, le hash est le MD5 de la cha\xEEne <tt>username:realm:password</tt>. Pour une utilisation simplifi\xE9e, utilisez la fonction <tt>callbackLogin</tt>. N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> du module si le r\xE9glage doit \xEAtre pr\xE9serv\xE9.</p>',par:{newval:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant le laisser-passer pour se connecter \xE0 l\x27adresse de callback'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op&eacute;ration se d&eacute;roule sans erreur.',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne un code d\x27erreur n&eacute;gatif.'};
+doc['Network']['set_callbackEncoding']={syn:'Modifie l\x27encodage \xE0 utiliser pour repr\xE9senter les valeurs notifi\xE9es par callback.',lib:'network.set_callbackEncoding()',pro:'function set_callbackEncoding(<span id=pn>newval</span>)',cmt:'<p>Modifie l\x27encodage \xE0 utiliser pour repr\xE9senter les valeurs notifi\xE9es par callback.</p>',par:{newval:'une valeur parmi <tt>Y_CALLBACKENCODING_FORM</tt>, <tt>Y_CALLBACKENCODING_JSON</tt>, <tt>Y_CALLBACKENCODING_JSON_ARRAY</tt>, <tt>Y_CALLBACKENCODING_CSV</tt>, <tt>Y_CALLBACKENCODING_YOCTO_API</tt>, <tt>Y_CALLBACKENCODING_JSON_NUM</tt>, <tt>Y_CALLBACKENCODING_EMONCMS</tt>, <tt>Y_CALLBACKENCODING_AZURE</tt> et <tt>Y_CALLBACKENCODING_INFLUXDB</tt> repr&eacute;sentant l\x27encodage \xE0 utiliser pour repr\xE9senter les valeurs notifi\xE9es par callback'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op&eacute;ration se d&eacute;roule sans erreur.',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne un code d\x27erreur n&eacute;gatif.'};
+doc['Network']['set_callbackMaxDelay']={syn:'Modifie l\x27attente maximale entre deux notifications par callback, en secondes.',lib:'network.set_callbackMaxDelay()',pro:'function set_callbackMaxDelay(<span id=pn>newval</span>)',cmt:'<p>Modifie l\x27attente maximale entre deux notifications par callback, en secondes.</p>',par:{newval:'un entier repr&eacute;sentant l\x27attente maximale entre deux notifications par callback, en secondes'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op&eacute;ration se d&eacute;roule sans erreur.',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne un code d\x27erreur n&eacute;gatif.'};
+doc['Network']['set_callbackMethod']={syn:'Modifie la m\xE9thode HTTP \xE0 utiliser pour signaler les changements d\x27\xE9tat par callback.',lib:'network.set_callbackMethod()',pro:'function set_callbackMethod(<span id=pn>newval</span>)',cmt:'<p>Modifie la m\xE9thode HTTP \xE0 utiliser pour signaler les changements d\x27\xE9tat par callback.</p>',par:{newval:'une valeur parmi <tt>Y_CALLBACKMETHOD_POST</tt>, <tt>Y_CALLBACKMETHOD_GET</tt> et <tt>Y_CALLBACKMETHOD_PUT</tt> repr&eacute;sentant la m\xE9thode HTTP \xE0 utiliser pour signaler les changements d\x27\xE9tat par callback'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op&eacute;ration se d&eacute;roule sans erreur.',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne un code d\x27erreur n&eacute;gatif.'};
+doc['Network']['set_callbackMinDelay']={syn:'Modifie l\x27attente minimale entre deux notifications par callback, en secondes.',lib:'network.set_callbackMinDelay()',pro:'function set_callbackMinDelay(<span id=pn>newval</span>)',cmt:'<p>Modifie l\x27attente minimale entre deux notifications par callback, en secondes.</p>',par:{newval:'un entier repr&eacute;sentant l\x27attente minimale entre deux notifications par callback, en secondes'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op&eacute;ration se d&eacute;roule sans erreur.',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne un code d\x27erreur n&eacute;gatif.'};
+doc['Network']['set_callbackUrl']={syn:'Modifie l\x27adresse (URL) de callback \xE0 notifier lors de changement d\x27\xE9tat significatifs.',lib:'network.set_callbackUrl()',pro:'function set_callbackUrl(<span id=pn>newval</span>)',cmt:'<p>Modifie l\x27adresse (URL) de callback \xE0 notifier lors de changement d\x27\xE9tat significatifs. N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> du module si le r\xE9glage doit \xEAtre pr\xE9serv\xE9.</p>',par:{newval:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant l\x27adresse (URL) de callback \xE0 notifier lors de changement d\x27\xE9tat significatifs'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op&eacute;ration se d&eacute;roule sans erreur.',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne un code d\x27erreur n&eacute;gatif.'};
+doc['Network']['set_defaultPage']={syn:'Modifie la page HTML par d\xE9faut du hub.',lib:'network.set_defaultPage()',pro:'function set_defaultPage(<span id=pn>newval</span>)',cmt:'<p>Modifie la page HTML par d\xE9faut du hub. Si aucune valeur n\x27est attribu\xE9e le hub retourne index.html qui est l\x27interface web du hub. Il est possible de changer cet page pour un fichier qui a \xE9t\xE9 upload\xE9 sur le hub.</p>',par:{newval:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant la page HTML par d\xE9faut du hub'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op&eacute;ration se d&eacute;roule sans erreur.',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne un code d\x27erreur n&eacute;gatif.'};
+doc['Network']['set_discoverable']={syn:'Modifie l\x27\xE9tat d\x27activation du protocole d\x27annonce sur le r\xE9seau permettant de retrouver facilement le module (protocols uPnP/Bonjour).',lib:'network.set_discoverable()',pro:'function set_discoverable(<span id=pn>newval</span>)',cmt:'<p>Modifie l\x27\xE9tat d\x27activation du protocole d\x27annonce sur le r\xE9seau permettant de retrouver facilement le module (protocols uPnP/Bonjour).</p>',par:{newval:'soit <tt>Y_DISCOVERABLE_FALSE</tt>, soit <tt>Y_DISCOVERABLE_TRUE</tt>, selon l\x27\xE9tat d\x27activation du protocole d\x27annonce sur le r\xE9seau permettant de retrouver facilement le module (protocols uPnP/Bonjour)'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op&eacute;ration se d&eacute;roule sans erreur.',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne un code d\x27erreur n&eacute;gatif.'};
+doc['Network']['set_httpPort']={syn:'Modifie la page HTML par d\xE9faut du hub.',lib:'network.set_httpPort()',pro:'function set_httpPort(<span id=pn>newval</span>)',cmt:'<p>Modifie la page HTML par d\xE9faut du hub. Si aucune valeur n\x27est attribu\xE9e le hub retourne index.html qui est l\x27interface web du hub. Il est possible de changer cet page pour un fichier qui a \xE9t\xE9 upload\xE9 sur le hub.</p>',par:{newval:'un entier repr&eacute;sentant la page HTML par d\xE9faut du hub'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op&eacute;ration se d&eacute;roule sans erreur.',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne un code d\x27erreur n&eacute;gatif.'};
+doc['Network']['set_logicalName']={syn:'Modifie le nom logique de l\x27interface r\xE9seau.',lib:'network.set_logicalName()',pro:'function set_logicalName(<span id=pn>newval</span>)',cmt:'<p>Modifie le nom logique de l\x27interface r\xE9seau. Vous pouvez utiliser <tt>yCheckLogicalName()</tt> pour v\xE9rifier si votre param\xE8tre est valide. N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> du module si le r\xE9glage doit \xEAtre pr\xE9serv\xE9.</p>',par:{newval:'une cha\xEEne de caract\xE8res repr\xE9sentant le nom logique de l\x27interface r\xE9seau.'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27appel se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['Network']['set_ntpServer']={syn:'Modifie l\x27adresse IP du serveur NTP que le module doit utiliser.',lib:'network.set_ntpServer()',pro:'function set_ntpServer(<span id=pn>newval</span>)',cmt:'<p>Modifie l\x27adresse IP du serveur NTP que le module doit utiliser. N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> et de red\xE9marrer le module pour que le param\xE8tre soit appliqu\xE9.</p>',par:{newval:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant l\x27adresse IP du serveur NTP que le module doit utiliser'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op&eacute;ration se d&eacute;roule sans erreur.',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne un code d\x27erreur n&eacute;gatif.'};
+doc['Network']['set_primaryDNS']={syn:'Modifie l\x27adresse IP du serveur de noms primaire que le module doit utiliser.',lib:'network.set_primaryDNS()',pro:'function set_primaryDNS(<span id=pn>newval</span>)',cmt:'<p>Modifie l\x27adresse IP du serveur de noms primaire que le module doit utiliser. En mode DHCP, si une valeur est sp\xE9cifi\xE9e, elle remplacera celle re\xE7ue du serveur DHCP. N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> et de red\xE9marrer le module pour que le param\xE8tre soit appliqu\xE9.</p>',par:{newval:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant l\x27adresse IP du serveur de noms primaire que le module doit utiliser'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op&eacute;ration se d&eacute;roule sans erreur.',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne un code d\x27erreur n&eacute;gatif.'};
+doc['Network']['set_secondaryDNS']={syn:'Modifie l\x27adresse IP du serveur de nom secondaire que le module doit utiliser.',lib:'network.set_secondaryDNS()',pro:'function set_secondaryDNS(<span id=pn>newval</span>)',cmt:'<p>Modifie l\x27adresse IP du serveur de nom secondaire que le module doit utiliser. En mode DHCP, si une valeur est sp\xE9cifi\xE9e, elle remplacera celle re\xE7ue du serveur DHCP. N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> et de red\xE9marrer le module pour que le param\xE8tre soit appliqu\xE9.</p>',par:{newval:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant l\x27adresse IP du serveur de nom secondaire que le module doit utiliser'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op&eacute;ration se d&eacute;roule sans erreur.',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne un code d\x27erreur n&eacute;gatif.'};
+doc['Network']['set_userData']={syn:'Enregistre un contexte libre dans l\x27attribut userData de la fonction, afin de le retrouver plus tard \xE0 l\x27aide de la m\xE9thode <tt>get_userData</tt>.',lib:'network.set_userData()',pro:'function set_userData(<span id=pn>data</span>)',cmt:'<p>Enregistre un contexte libre dans l\x27attribut userData de la fonction, afin de le retrouver plus tard \xE0 l\x27aide de la m\xE9thode <tt>get_userData</tt>. Cet attribut n\x27es pas utilis\xE9 directement par l\x27API. Il est \xE0 la disposition de l\x27appelant pour stocker un contexte.</p>',par:{data:'objet quelconque \xE0 m\xE9moriser'}};
+doc['Network']['set_userPassword']={syn:'Modifie le mode de passe pour l\x27utilisateur \x22user\x22, qui devient alors instantan\xE9ment n\xE9cessaire pour tout acc\xE8s au module.',lib:'network.set_userPassword()',pro:'function set_userPassword(<span id=pn>newval</span>)',cmt:'<p>Modifie le mode de passe pour l\x27utilisateur \x22user\x22, qui devient alors instantan\xE9ment n\xE9cessaire pour tout acc\xE8s au module. Si la valeur fournie est une cha\xEEne vide, plus aucun mot de passe n\x27est n\xE9cessaire. N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> du module si le r\xE9glage doit \xEAtre pr\xE9serv\xE9.</p>',par:{newval:'une cha&icirc;ne de caract&egrave;res repr&eacute;sentant le mode de passe pour l\x27utilisateur \x22user\x22, qui devient alors instantan\xE9ment n\xE9cessaire pour tout acc\xE8s au module'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op&eacute;ration se d&eacute;roule sans erreur.',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne un code d\x27erreur n&eacute;gatif.'};
+doc['Network']['set_wwwWatchdogDelay']={syn:'Modifie la dur\xE9e de perte de connection WWW tol\xE9r\xE9e (en secondes) avant de d\xE9clancher un red\xE9marrage automatique pour tenter de r\xE9cup\xE9rer la connectivit\xE9 Internet.',lib:'network.set_wwwWatchdogDelay()',pro:'function set_wwwWatchdogDelay(<span id=pn>newval</span>)',cmt:'<p>Modifie la dur\xE9e de perte de connection WWW tol\xE9r\xE9e (en secondes) avant de d\xE9clancher un red\xE9marrage automatique pour tenter de r\xE9cup\xE9rer la connectivit\xE9 Internet. Une valeur nulle d\xE9sactive le red\xE9marrage automatique en cas de perte de connectivit\xE9 WWW. La plus petite dur\xE9e non-nulle utilisable est 90 secondes.</p>',par:{newval:'un entier repr&eacute;sentant la dur\xE9e de perte de connection WWW tol\xE9r\xE9e (en secondes) avant de d\xE9clancher un red\xE9marrage automatique pour tenter de r\xE9cup\xE9rer la connectivit\xE9 Internet'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op&eacute;ration se d&eacute;roule sans erreur.',ext:'En cas d\x27erreur, d&eacute;clenche une exception ou retourne un code d\x27erreur n&eacute;gatif.'};
+doc['Network']['unmuteValueCallbacks']={syn:'R\xE9active l\x27envoi de chaque changement de la valeur publi\xE9e au hub parent.',lib:'network.unmuteValueCallbacks()',pro:'function unmuteValueCallbacks()',cmt:'<p>R\xE9active l\x27envoi de chaque changement de la valeur publi\xE9e au hub parent. Cette fonction annule un pr\xE9c\xE9dent appel \xE0 <tt>muteValueCallbacks()</tt>. N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> du module si le r\xE9glage doit \xEAtre pr\xE9serv\xE9.</p>',ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['Network']['useDHCP']={syn:'Modifie la configuration de l\x27interface r\xE9seau pour utiliser une adresse assign\xE9e automatiquement par le serveur DHCP.',lib:'network.useDHCP()',pro:'function useDHCP(<span id=pn>fallbackIpAddr</span>, <span id=pn>fallbackSubnetMaskLen</span>, <span id=pn>fallbackRouter</span>)',cmt:'<p>Modifie la configuration de l\x27interface r\xE9seau pour utiliser une adresse assign\xE9e automatiquement par le serveur DHCP. En attendant qu\x27une adresse soit re\xE7ue (et ind\xE9finiment si aucun serveur DHCP ne r\xE9pond), le module utilisera les param\xE8tres IP sp\xE9cifi\xE9s \xE0 cette fonction. N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> et de red\xE9marrer le module pour que le param\xE8tre soit appliqu\xE9.</p>',par:{fallbackIpAddr:'adresse IP \xE0 utiliser si aucun serveur DHCP ne r\xE9pond',fallbackSubnetMaskLen:'longueur du masque de sous-r\xE9seau \xE0 utiliser si aucun serveur DHCP ne r\xE9pond. Par exemple, la valeur 24 repr\xE9sente 255.255.255.0.',fallbackRouter:'adresse de la passerelle \xE0 utiliser si aucun serveur DHCP ne r\xE9pond'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+doc['Network']['useStaticIP']={syn:'Modifie la configuration de l\x27interface r\xE9seau pour utiliser une adresse IP assign\xE9e manuellement (adresse IP statique).',lib:'network.useStaticIP()',pro:'function useStaticIP(<span id=pn>ipAddress</span>, <span id=pn>subnetMaskLen</span>, <span id=pn>router</span>)',cmt:'<p>Modifie la configuration de l\x27interface r\xE9seau pour utiliser une adresse IP assign\xE9e manuellement (adresse IP statique). N\x27oubliez pas d\x27appeler la m\xE9thode <tt>saveToFlash()</tt> et de red\xE9marrer le module pour que le param\xE8tre soit appliqu\xE9.</p>',par:{ipAddress:'adresse IP \xE0 utiliser par le module',subnetMaskLen:'longueur du masque de sous-r\xE9seau \xE0 utiliser. Par exemple, la valeur 24 repr\xE9sente 255.255.255.0.',router:'adresse IP de la passerelle \xE0 utiliser (\x22default gateway\x22)'},ret:'<tt>YAPI_SUCCESS</tt> si l\x27op\xE9ration se d\xE9roule sans erreur.',ext:'En cas d\x27erreur, d\xE9clenche une exception ou retourne un code d\x27erreur n\xE9gatif.'};
+//--- (end of generated code: Network)
+//--- (end of generated code)
+
+ function isClassMethod(str_method)
+ { return str_method.charAt(0) == str_method.charAt(0).toUpperCase();
+ }
+
+ // add function aliases to the substitution list
+ for(classname in doc)
+ { for(funcname in doc[classname])
+   { if(isClassMethod(funcname))
+     { // class method, generate shortcut
+       sub['y'+funcname] = doc[classname][funcname].lib;
+     }
+   }
+ }
+
+ function ApplySub(text,classname)
+ { var pos, endpos = 0, key, rep;
+   if(sub['null'] != 'null') text = text.replace('<tt>null</tt>','<tt>'+sub['null']+'</tt>');
+   if(UseShortcuts) return text;
+   if(classname.substr(0,1)!='Y') classname = 'Y'+classname;
+   while((pos = text.toLowerCase().indexOf('<tt>',endpos)) >= endpos) {
+       pos += 4;
+       endpos = text.indexOf('</', pos);
+       key = text.substr(pos,endpos-pos).match(/[\w_]+/);
+       if(key)
+       { key = key[0];
+         rep = sub[key];
+         if(!rep && key.substr(0,2)=='Y_' && sub['YAPI_SUCCESS']) {
+           rep = sub['YAPI_SUCCESS'].replace('YAPI',classname).replace('SUCCESS',key.substr(2,key.length));
+         }
+         if(rep) text = text.substr(0, pos)+rep+text.substr(endpos);
+       }
+   }
+   return text;
+ }
+
+ function SetPosition(o,x,y)
+ { var it=document.getElementById(o);
+   if (!it) throw  "SetPosition: "+o+" element does not exist."
+   it.style.top  = y;
+   it.style.left  = x;
+ }
+
+function GetPositionX(o)
+ { var it=document.getElementById(o);
+   if (!it) throw  "GetPositionX: "+o+" element does not exist."
+   return parseInt(it.style.left);
+ }
+
+function GetPositionY(o)
+ { var it=document.getElementById(o);
+   if (!it) throw  "GetPositionY: "+o+" element does not exist."
+   return parseInt(it.style.top);
+ }
+
+function  GetWidth(o)
+ {	var it=document.getElementById(o);
+    if (!it) throw  "GetWidth: "+o+" element does not exist."
+    return parseInt(it.style.width);
+ }
+
+function  GetHeight(o)
+ {	var it=document.getElementById(o);
+    if (!it) throw  "GetHeight: "+o+" element does not exist."
+    return parseInt(it.style.height);
+ }
+
+function  SetHeight(o,h)
+ {	var it=document.getElementById(o);
+    if (!it) throw  "SetHeight: "+o+" element does not exist."
+    h=parseInt(h);
+    if (h<0) h=0;
+	it.style.height  =  h+ "px";
+ }
+
+function  SetWidth(o,w)
+ {	var it=document.getElementById(o);
+    if (!it) throw  "SetWidth: "+o+" element does not exist."
+    w = parseInt(w);
+    if (w<0) w=0;
+	it.style.width  = parseInt(w) + "px";
+ }
+
+function  SetLeft(o,l)
+ {	var it=document.getElementById(o);
+    if (!it) throw  "SetLeft: "+o+" element does not exist."
+    it.style.left  = parseInt(l) + "px";
+ }
+
+function  SetTop(o,t)
+ {	var it=document.getElementById(o);
+    if (!it) throw  "SetTop: "+o+" element does not exist."
+    it.style.top  = parseInt(t) + "px";
+ }
+
+function  SetSize(o,w,h)
+ {	var it=document.getElementById(o);
+    if (!it) throw  "SetSize: "+o+" element does not exist."
+    w= parseInt(w);
+    if (w<0) w=0;
+    h=parseInt(h);
+    if (h<0) h=0;
+    it.style.width   = w;
+	it.style.height  = h;
+ }
+
+function  GetWindowWidth()
+ {	 return parseInt(document.body.clientWidth);
+ }
+
+function  GetWindowHeight()
+ {	 return parseInt(document.body.clientHeight);
+ }
+
+function computeWinWH()
+ { WinW             = GetWindowWidth() ;
+   if (WinW<600) WinW=600;
+   WinH             = GetWindowHeight();
+   if (WinH<400) WinH=400;
+}
+
+
+ function getInnerHeight()
+ {  var D = document;
+    return Math.max(
+        Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
+        Math.max(D.body.offsetHeight, D.documentElement.offsetHeight),
+        Math.max(D.body.clientHeight, D.documentElement.clientHeight)
+    );
+ }
+
+ function getInnerWidth()
+ {  var D = document;
+    return Math.max(
+        Math.max(D.body.scrollWidth, D.documentElement.scrollWidth),
+        Math.max(D.body.offsetWidth, D.documentElement.offsetWidth),
+        Math.max(D.body.clientWidth, D.documentElement.clientWidth)
+    );
+
+ }
+
+function onResize(fct)
+  { fct();
+    resizeCallBacks[resizeCallBacks.length]=fct;
+  }
+
+function windowResized()
+  { computeWinWH()
+    for (var i=0;i<resizeCallBacks.length;i++)
+      resizeCallBacks[i]();
+  }
+
+function jsQuote(str_in)
+{ str_in = str_in+'';
+  var str_out   = '';
+  for (i=0;i<str_in.length;i++)
+   {
+     var ascii = str_in.charCodeAt(i);
+     if ((ascii>=32)&&(ascii<=127)&&(ascii!=34)&&(ascii!=39)) str_out =str_out+str_in.charAt(i);
+     else
+      { var hex = ascii.toString(16).toUpperCase();
+        if (hex.length==1) hex = '0'+hex;
+        str_out = str_out + String.fromCharCode(92) + 'x'+ hex;
+      }
+   }
+   return str_out;
+  }
+
+
+function resizeMargin()
+ {
+   SetSize("MarginLayer",marginSize,WinH-110);
+   SetLeft("FunctionsLayer",marginSize);
+   SetSize("FunctionsLayer",WinW-marginSize,WinH-110);
+ }
+
+function resizeSeparator()
+ { SetHeight("separatorLayer",WinH-110);
+ }
+
+function positionObject(int_x,int_y)
+ { this.x = int_x;
+   this.y = int_y;
+ }
+
+function GetEventPosition(event)
+ { var x,y;
+   if (event.changedTouches)
+    { x = event.changedTouches[0].pageX;
+      y = event.changedTouches[0].pageY;
+    }
+   else
+    {  x = event.PageX;
+       y = event.PageY;
+      if (!x)
+        { x= event.clientX + document.body.scrollLeft;
+         y= event.clientY + document.body.scrollTop;
+        }
+    }
+  return new positionObject(x,y);
+ }
+
+
+function EnableDrag(var_element,onDragMove,onDragEnd)
+  {
+   //onDragMove & onDragMove are optinnals callbacks fct(DomElement,position) where position is an associtative array "x","y
+   if (document.addEventListener)
+      { var_element.addEventListener("mousedown",Drag_start,false);
+        var_element.addEventListener("touchstart",Drag_start,false);
+      }
+   else
+     if (document.attachEvent)
+       var_element.attachEvent("onmousedown",Drag_start);
+
+   if (onDragMove)  var_element.onDragMove = onDragMove;
+   if (onDragEnd)   var_element.onDragEnd  = onDragEnd;
+  }
+
+ var LastDraggedObject = null;
+
+ function DraggedObject(obj_element,obj_elmtInitialPos,obj_mouseInitalPos)
+  {this.element         = obj_element;
+   this.elmtInitialPos  = obj_elmtInitialPos;
+   this.elmtCurrentPos  = new positionObject(obj_elmtInitialPos.x,obj_elmtInitialPos.y);
+   this.mouseInitialPos = obj_mouseInitalPos;
+  }
+
+function Drag_start(event)
+ {
+   if (!event) event = window.event;
+   var source = event.srcElement;
+
+   if (event.button!=undefined)
+    { if ((event.button!=1) && (document.attachEvent)) return;  // ie;
+      if ((event.button!=0) && (document.addEventListener)) return;  // other;
+    }
+
+   if (!source) source= this;
+   if (!source) return;
+   var originalsource=source;
+   while (source.tagName!="DIV")
+      { if (source.tagName=="A") return false;  // there is a link (a probably a button) on the way:  cancel drag
+        source=source.parentNode;
+      }
+
+   if (event.preventDefault)   event.preventDefault();
+   source.style.cursor="col-resize";
+   lastDraggedObject      = new DraggedObject( source,
+                                               new positionObject(parseInt(source.style.left),parseInt(source.style.top)),
+                                               GetEventPosition(event)
+                                              );
+   if (document.addEventListener)
+    { document.addEventListener("mousemove",Drag_mouseCapture,false);
+      document.addEventListener("mouseup",  Drag_stopMouseCapture,false);
+      document.addEventListener("touchmove",Drag_mouseCapture,false);
+      document.addEventListener("touchend", Drag_stopMouseCapture,false);
+    }
+   else
+   if (document.attachEvent)
+    { document.attachEvent("onmousemove",Drag_mouseCapture);
+      document.attachEvent("onmouseup",Drag_stopMouseCapture);
+    }
+   document.onmouseup   =   Drag_stopMouseCapture;
+ }
+
+
+function Drag_mouseCapture(event)
+ {
+   if (!event) event = window.event;
+   var position = GetEventPosition(event);
+   if (event.preventDefault) event.preventDefault();
+
+
+   var x = (lastDraggedObject.elmtInitialPos.x + position.x -  lastDraggedObject.mouseInitialPos.x);
+   var y = (lastDraggedObject.elmtInitialPos.y + position.y -  lastDraggedObject.mouseInitialPos.y);
+
+   var iw = getInnerWidth()
+   var ih = getInnerHeight();
+   var w  = lastDraggedObject.element.offsetWidth;
+   var h  = lastDraggedObject.element.offsetHeight;
+
+   if (x>iw-w) x=iw-w;
+   if (y>ih-h) y=ih-h;
+   if (x<0) x=0;
+   if (y<0) y=0;
+
+   var p = {x:x,y:y};
+
+   if (lastDraggedObject.element.onDragMove)
+      lastDraggedObject.element.onDragMove(lastDraggedObject.element,p);
+
+   lastDraggedObject.elmtCurrentPos.x   = p.x;
+   lastDraggedObject.elmtCurrentPos.y   = p.y;
+
+   lastDraggedObject.element.style.left = p.x+"px";
+   lastDraggedObject.element.style.top  = p.y+"px";
+ }
+
+function Drag_stopMouseCapture()
+ {
+   if (document.removeEventListener)
+    { document.removeEventListener("mousemove",Drag_mouseCapture,false);
+      document.removeEventListener("mouseup",  Drag_stopMouseCapture,false);
+      document.removeEventListener("touchmove",Drag_mouseCapture,false);
+      document.removeEventListener("touchend", Drag_stopMouseCapture,false);
+    }
+   else
+   if (document.detachEvent)
+    { document.detachEvent("onmousemove",Drag_mouseCapture);
+      document.detachEvent("onmouseup",Drag_stopMouseCapture);
+    }
+
+  if (lastDraggedObject)
+    { lastDraggedObject.element.style.cursor='col-resize';
+      if (lastDraggedObject.element.onDragEnd)
+       lastDraggedObject.element.onDragEnd(lastDraggedObject.element,{x:lastDraggedObject.elmtCurrentPos.x,y:lastDraggedObject.elmtCurrentPos.y});
+    }
+   lastDraggedObject = null;
+ }
+
+ function marginMove(el,pos)
+  {pos.y = 80;
+   if (pos.x<100) pos.x=100;
+   if (pos.x>WinW-100) pos.x=WinW-100;
+   marginSize=pos.x;
+   resizeMargin()
+  }
+
+ function proto(str_classindex, m)
+  {
+      var funcproto = doc[str_classindex][m].pro;
+      if(isClassMethod(m)) {
+          if(UseShortcuts) {
+              funcproto = funcproto.replace(m, 'y'+m);
+          } else if(doc[str_classindex][m].lib.substr(0,1) == '[' && funcproto.substr(0,1) != '+') {
+              var params = doc[str_classindex][m].par;
+              var methodpos = funcproto.search(m);
+              var endrettype = methodpos;
+              while(endrettype > 0 && funcproto.substr(endrettype-1,1)==' ') endrettype--;
+              var newproto = "+("+funcproto.substr(0,endrettype)+") "+m;
+              var pos = methodpos+m.length;
+              for(var p in params) {
+                  pos += funcproto.slice(pos).search(/[A-Za-z]/);
+                  var argpos = pos + funcproto.slice(pos).search('<span');
+                  var endargtype = argpos;
+                  while(endargtype > pos && funcproto.substr(endargtype-1,1)==' ') endargtype--;
+                  var endarg = argpos + funcproto.slice(argpos).search(/[,)]/);
+                  newproto += ": ("+funcproto.slice(pos, endargtype)+") "+funcproto.slice(argpos,endarg)+" ";
+                  pos = endarg;
+              }
+              funcproto = newproto;
+          }
+      }
+      return funcproto
+  }
+
+ var lastindex_shown = "";
+ var lastname_shown = null;
+ function Show(str_classindex,str_name)
+  {
+    if ((str_classindex=='')&&(str_name==''))
+      { document.getElementById("FunctionsLayerInner").innerHTML =NotFound;
+        return;
+      }
+
+    var fcthtml='';
+    fcthtml = "";
+    lastindex_shown =str_classindex;
+    if (str_name)
+       { lastname_shown = str_name;
+         var fct = doc[str_classindex][str_name];
+         var funcname = fct.lib;
+         var funcproto = proto(str_classindex, str_name);
+         if(UseShortcuts && isClassMethod(str_name)) {
+             funcname = 'y'+str_name+'()';
+         }
+         fcthtml = "<span class='funcHeader'>"+funcname+'</span>'
+                   +"<br><br><span class='prototype'>"+funcproto+'</span>'
+                   +'<br><br>'+ApplySub(fct.cmt,str_classindex);
+         if (fct.par)
+          {  fcthtml += "<span class='paramAndRet'>"+ParamLabel+'</span><br>\n';
+             fcthtml +='<table class="paramtable">'
+             for (var p in  fct.par)
+                 fcthtml +='<tr><td class="pn">'+p+'</td><td> : '+ApplySub(fct.par[p],str_classindex)+'</td></tr>\n';
+             fcthtml +='</table><br>'
+          }
+
+         if (fct.ret)
+          { fcthtml += "<span class='paramAndRet'>"+ReturnLabel+'</span><br>\n';
+            fcthtml +='<p class="paramtable">'+ApplySub(fct.ret,str_classindex)+'</p>\n';
+          }
+
+         if (fct.ext)  fcthtml+=ApplySub(fct.ext,str_classindex);
+      }
+     else
+     if (str_classindex!='')
+     {  fcthtml = "<span class='funcHeader'>"+str_classindex+'</span><br>'
+                + "<p>"+ApplySub(doc[str_classindex][''].syn,str_classindex)+"</p>"
+                + "<p>"+IncludeLabel+"</p>"
+                + "<p  class='include'>"+doc[str_classindex][''].inc+"</p>"
+                + "<p>"+ApplySub(doc[str_classindex][''].cmt,str_classindex)+"</p>";
+        for (m in doc[str_classindex]) {
+          if (m!='') {
+            var funcproto = proto(str_classindex, m);
+            fcthtml +="<p class='methodlist'><a class='protoindex' href='javascript:Show(\""+str_classindex+"\",\""+m+"\")'>"+funcproto+'</a><br>'
+                    +"<span class='synlist'>"+ApplySub(doc[str_classindex][m].syn,str_classindex)+'</span></p>';
+          }
+        }
+     }
+     document.getElementById("FunctionsLayerInner").innerHTML =  fcthtml;
+  }
+
+  function expand(source,openonly)
+  { if (document.getElementById(source.id+"List").style.display=='' && !openonly)
+     { document.getElementById(source.id+"List").style.display='none';
+       document.getElementById(source.id).src=plusimage;
+     }
+    else
+     { document.getElementById(source.id+"List").style.display='';
+       document.getElementById(source.id).src=minusimage;
+     }
+  }
+
+ function ShowFunctions(str_currentClassName)
+  { var marginhtml = "";
+    for (var classname in doc)
+    {  var icon = plusimage;
+       var fct  = "expand";
+       var display = "none"
+       if (str_currentClassName==classname)
+         {  icon = minusimage;
+            fct  = "expand";
+            display = ""
+        }
+       marginhtml = marginhtml+"<span class='classheader'> <img class='expandColapse' id='"+classname+"' onclick='"+fct+"(this)' src='"+icon+"'/> ";
+       marginhtml = marginhtml+"<a href='javascript:Show(\""+classname+"\",\"\");' id='"+classname+"' onclick='"+fct+"(this,true)'>"+classname+'</a></span><br>';
+       marginhtml = marginhtml+ "<div id='"+classname+"List' class='methodsList' style='display:"+display+"'>";
+
+       for (var method in doc[classname])
+       { if (method!='')
+         { var funcname = doc[classname][method].lib;
+           if(UseShortcuts && isClassMethod(method)) funcname = 'y'+method+'()';
+           marginhtml = marginhtml+"<a id="+classname+'.'+method+" style='display:block' href='javascript:Show(\""+classname+"\",\""+method+"\");'>"+funcname+'</a>';
+         }
+       }
+       marginhtml = marginhtml+'</div>'
+    }
+
+    document.getElementById("MarginLayer").innerHTML = marginhtml;
+  }
+
+ function fctMatch(classname,method,values)
+  { var found    = new Array()
+    var tosearch = new Array()
+
+    for (var i=0;i<values.length;i++)
+     if (values[i]!='' && values[i]!='y')
+      { if(values[i].substr(0,3) == '[y]')
+          tosearch[tosearch.length] = values[i].substr(3,values[i].length);
+        else
+          tosearch[tosearch.length] = values[i];
+      }
+
+    for (var i=0;i<tosearch.length;i++)
+       {  var expr     = new RegExp(tosearch[i], "i");
+          var fct = doc[classname][method]
+          var found = classname.search(expr)>=0;
+          if (!found) found=method.search(expr)>=0;
+
+          if (!found && fct.inc)
+            {if (!found && fct.syn) found=fct.syn.search(expr)>=0;
+             if (!found) found=fct.inc.search(expr)>=0;
+            }
+
+          if (!found && fct.pro) found=fct.pro.search(expr)>=0;
+          if (fct.par)
+             for (var p in  fct.par)
+              { if (!found) found=p.search(expr)>=0;
+                if (!found) found=fct.par[p].search(expr)>=0;
+              }
+          if (fct.ret)
+              { if (!found) found=fct.ret.search(expr)>=0;
+              }
+          if (!found && fct.cmt)found=fct.cmt.search(expr)>=0;
+          if (!found && fct.ext)found=fct.ext.search(expr)>=0;
+
+          if (!found) return false;
+       }
+
+
+    return true;
+
+  }
+
+ var searchTimer = null;
+
+ function doSearch()
+  { searchTimer = null;
+    var value= document.forms['yoctoForm'].elements['search'].value;
+
+    if (value=='')
+     { for (var classname in doc)
+        { var container = document.getElementById(classname+"List");
+          for (var method in doc[classname])
+           if (method!='')
+             { var it = document.getElementById(classname+'.'+method);
+               if (it) it.style.display="block";
+             }
+          document.getElementById(classname).style.visibility='visible';
+          var container = document.getElementById(classname+"List");
+          if (container["originalDisplay"]!="")
+           { document.getElementById(classname+"List").style.display='none';
+             document.getElementById(classname).src=plusimage;
+           }
+          else
+           { document.getElementById(classname+"List").style.display='';
+             document.getElementById(classname).src=minusimage;
+           }
+          container["originalDisplay"]=null;
+        }
+        Show(lastindex_shown,lastname_shown);
+       return;
+      }
+
+    var firstindex = '';
+    var firstname  = '';
+    qvalue = value;
+    value = '';
+    for(var i = 0; i < qvalue.length; i++) {
+        var c = qvalue.charAt(i);
+        if(c == '\\' || c == '[' || c == ']' || c == '(' || c == ')') {
+            value += '.';
+        } else {
+          if (c!=' ')  value+='['+qvalue.charAt(i)+']';
+                   else value+=' ';
+        }
+    }
+    for (var classname in doc)
+     { var  matchfound=false;
+       var container = document.getElementById(classname+"List");
+       if (!container["originalDisplay"]) container["originalDisplay"]=null;
+       if (container["originalDisplay"]==null) container["originalDisplay"] = container.style.display;
+       values = value.split(' ');
+       for (var method in doc[classname])
+
+         { var it  = document.getElementById(classname+'.'+method);
+           var match = fctMatch(classname,method,values);
+               if (match)
+                 {  if (it) it.style.display="block";
+                     matchfound=true;
+                    if (firstindex=='') {firstindex=classname; firstname = method;}
+                 }
+              else
+                 { if (it) it.style.display="none";
+                 }
+         }
+
+      if  (matchfound)
+          { document.getElementById(classname+"List").style.display='';
+            document.getElementById(classname).src=minusimage;
+            document.getElementById(classname).style.visibility='visible';
+          }
+         else
+          { document.getElementById(classname+"List").style.display='none';
+            document.getElementById(classname).style.visibility='hidden';
+            document.getElementById(classname).src=plusimage;
+          }
+     }
+
+    Show(firstindex,firstname);
+
+
+  }
+
+ function initSearch()
+  { if (searchTimer!=null)  clearTimeout(searchTimer);
+    searchTimer = setTimeout('doSearch()',500);
+  }
+
+ function sortObject(o) {
+    var sorted = {}, key, a = [];
+    for (key in o) {
+        if (key != 'YAPI' && o.hasOwnProperty(key)) {
+                a.push(key);
+        }
+    }
+
+    a.sort();
+     if (o['YAPI']) sorted['YAPI']=o['YAPI'];
+    for (key = 0; key < a.length; key++) {
+        sorted[a[key]] = o[a[key]];
+    }
+    return sorted;
+}
+
+ function OOcheckboxChange()
+  { UseShortcuts =  document.forms["yoctoForm"].elements["OOcheckbox"].checked;
+    ShowFunctions(lastindex_shown);
+    Show(lastindex_shown,lastname_shown);
+
+  }
+
+
+
+
+ -->
+</SCRIPT>
+
+</HEAD>
+
+<BODY>
+
+<div id="BannerLayer">
+<table width=100% >
+<tr><td rowspan=2>
+<img alt="Yocto-Api :-)" style='margin-left:5px;'src="data:image/png;base64,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" />
+</td><td style='vertical-align:top;text-align:right'>
+<a class='extLink' href='http://www.yoctopuce.com'>www.yoctopuce.com</a>
+</td>
+</tr>
+<tr><td  id='langdt'></td></TR>
+</table>
+</div>
+<div id="MarginLayer"></div>
+<div id="FunctionsLayer"><div id="FunctionsLayerInner"></div></div>
+<div id="FooterLayer"><form name='yoctoForm'>
+<table width=100% style='margin-top:3px;'>
+<tr><td>
+<img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAANwAAADcBYx2BhQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGgSURBVCiRjdC9a1NhFAbw8973ed7bewm859KKc4oFwUUwk0uMkICC4gfYIjSDQhaH+ge4BOFCwEUpQsCtEEkHURCHigQjcQo4FFyKHYWsflGaq9elStVr9Yzn4cf5MHmeS1G12+1gNBrdJLkMYIHkNoD+ZDLpDAaDzBRBY4yp1+tPSZ4los0QhzYEH0+RcgLAq3K5fLoQNhqNGwBWY3d85fBM+vxHf8fdPWnc5gOSt4KiNUkukuHb/UhEZGZ35TVs/MZau1gIrbXzLph7UZTBzL4EMF8IAWwZfjrz9duu+T0L3Ic6gK2/rboGmCM77vbF/Rizqw1SjgFY++M5lUqF4/F42mw2HwJYAsJ3sHMb5JcaKEcBPIvj+NwvsFqtni+VSj3vfb/X611vtVrXACxbaxecc9sk+51O536e5/lPWKvVLkRRtJ4kCVX1c5ZlSbfbnRadIiIS7E26FEXRuqpSVafe+6sHIREROxwOL8dx3FdVJkky9d5fSdP0yUFIRCQIw/CeqkJVM+/9Upqmj/+FREQCVb2jqu/30KP/QSIi3wFqcn4o9hAuDAAAAABJRU5ErkJggg==" />
+<input name='search' onkeyup='initSearch()'></form>
+</td><td id ='oosyntax' ></td><td id='version'>
+</td>
+</table>
+
+</div>
+<div id="separatorLayer" style='top:80px;left:250px'></div>
+
+<SCRIPT type="text/JavaScript" >
+<!--
+document.getElementById('langdt').innerHTML = Language;
+document.getElementById('version').innerHTML = Version;
+
+computeWinWH();
+
+onResize(function(){SetWidth("BannerLayer",WinW)});
+onResize(resizeMargin);
+onResize(function(){SetWidth("FooterLayer",WinW);SetTop("FooterLayer",WinH-30);});
+onResize(resizeSeparator);
+EnableDrag(document.getElementById("separatorLayer"),marginMove,marginMove);
+if (UseShortcuts!=null)
+ { var td = document.getElementById("oosyntax");
+   var widget ='<input type="checkbox" id="OOcheckbox" '+ (UseShortcuts?'checked':'') + ' onclick="OOcheckboxChange(this);"> ' + AbbrevLabel;
+   td.innerHTML = widget;
+   td.title =AbbrevHint;
+   td.alt =AbbrevHint;
+
+
+ }
+doc = sortObject(doc);
+ShowFunctions();
+Show(doc["YAPI"]?"YAPI":"Module","");
+
+
+window.onresize = windowResized;
+-->
+</script>
+
+</BODY>
+
+
+</HEAD>
+
